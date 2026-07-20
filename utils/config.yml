@@ -1,0 +1,11 @@
+# 批量添加和修改、删除 front matter 配置文件
+path:
+  - docs
+  - 01.云原生
+
+delete: []
+
+data:
+  # author:
+  #   name: Allen
+  #   link: https://github.com/a11en4z
