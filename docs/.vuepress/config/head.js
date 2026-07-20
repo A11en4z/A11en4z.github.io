@@ -1,6 +1,8 @@
 module.exports = [
   ['link', { rel: 'icon', href: '/favicon.png' }],
   ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+  ['meta', { name: 'robots', content: 'noindex, nofollow, noarchive' }],
+  ['meta', { name: 'googlebot', content: 'noindex, nofollow' }],
   [
     'meta',
     {

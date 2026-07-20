@@ -1,31 +1,34 @@
-# Allen Space
+# Allen Space（私有）
 
-个人博客 / 知识库，基于 [vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing)，风格对齐 [结构化笔记站（含 K8S 目录）](https://2290653824.github.io/other/#K8S)。
+个人知识库，基于 [vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing)。
 
-在线地址（合并并切换 Pages 后）：https://a11en4z.github.io/  
-K8S 目录：https://a11en4z.github.io/cloud/#K8S
+站点已加访问口令门禁，并建议将本仓库设为 **Private**，避免源码公开。
 
-## 已完成
+## 请你立刻做：把仓库设为私有
 
-- 从 Hexo 静态站迁移为 VuePress Vdoing 源码站
-- 导入 [A11en4z/k8s-tutorials](https://github.com/A11en4z/k8s-tutorials) 全套笔记到 `docs/01.云原生/01.K8S/`
-- GitHub Actions：推送后构建并发布到 `gh-pages`
+我这边的 token **没有权限**改可见性，需要你在网页上操作：
+
+1. 打开 https://github.com/A11en4z/A11en4z.github.io/settings  
+2. 拉到最下方 **Danger Zone**  
+3. **Change repository visibility** → **Make private**
+
+> 说明：GitHub Free 下，即便仓库 Private，Pages 网址仍可能被公网打开；因此站点另加了访问口令。若你有 GitHub Pro / Enterprise，还可在 Pages 设置里把站点可见性改为 Private。
 
 ## 本地开发
 
 ```bash
 npm install
-npm run dev      # http://localhost:8080
+npm run dev
 npm run build
 ```
 
-## 叠加 Obsidian 笔记（可选）
+## Obsidian 导入
 
 ```bash
 export OBSIDIAN_K8S_DIR="$HOME/你的库/K8S"
 npm run import:obsidian
 ```
 
-## 部署注意
+## 部署
 
-仓库 **Settings → Pages → Source** 需设为 **gh-pages** 分支（根目录）。当前若仍指向 `main`，合并本分支并等待 Actions 成功后切换即可。
+推送到 `main` 后 Actions 发布到 `gh-pages`。Pages Source 保持 **gh-pages** 即可。
