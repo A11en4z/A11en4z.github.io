@@ -2,9 +2,9 @@
 home: true
 heroImage: /img/avatar.jpg
 heroText: Allen Space
-tagline: Every things is gonna be all right
-actionText: 开始学习 K8S →
-actionLink: /pages/k8s-overview/
+tagline: AI 资讯 × 运维笔记 — 每日精选与云原生学习
+actionText: 阅读最新晚报 →
+actionLink: /brief/
 bannerBg: none
-postList: detailed
+postList: none
 ---

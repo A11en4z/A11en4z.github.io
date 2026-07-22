@@ -1,10 +1,17 @@
+const briefNav = require('./brief-nav.js')
+
 module.exports = [
   { text: '首页', link: '/' },
   {
-    text: '云原生',
+    text: 'AI 资讯',
+    link: '/brief/',
+    items: briefNav,
+  },
+  {
+    text: '运维笔记',
     link: '/cloud/',
     items: [
-      { text: '目录', link: '/cloud/' },
+      { text: '云原生目录', link: '/cloud/' },
       { text: 'K8S', link: '/cloud/#K8S' },
       { text: 'Docker', link: '/cloud/#Docker' },
     ],
@@ -15,6 +22,7 @@ module.exports = [
   {
     text: '更多',
     items: [
+      { text: 'AI 资讯归档', link: '/pages/brief-archive/' },
       { text: '从 Obsidian 导入', link: '/pages/obsidian-import/' },
       { text: 'GitHub', link: 'https://github.com/a11en4z/a11en4z.github.io' },
     ],

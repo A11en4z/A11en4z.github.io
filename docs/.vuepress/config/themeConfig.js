@@ -1,7 +1,9 @@
 const nav = require('./themeConfig/nav.js')
+const htmlModules = require('./themeConfig/htmlModules.js')
 
 module.exports = {
   nav,
+  htmlModules,
   sidebarDepth: 2,
   logo: '/img/avatar.jpg',
   repo: 'a11en4z/a11en4z.github.io',
