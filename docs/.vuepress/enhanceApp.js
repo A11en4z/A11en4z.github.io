@@ -3,7 +3,7 @@
  * 口令的 SHA-256 存在 SITE_ACCESS_HASH；明文口令不入库。
  */
 const SITE_ACCESS_HASH =
-  '7ac4991c748dfe252b255dd46446430bc8097812107bcb46c19c300622e48ed3'
+  '8b4d41069af6e6f9fee383abe199734bfe5e3b2b80f3306ea163a2968b5cbd3a'
 const STORAGE_KEY = 'allen-space-auth-v1'
 
 async function sha256Hex(text) {
