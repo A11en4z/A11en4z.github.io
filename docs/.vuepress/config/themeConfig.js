@@ -20,7 +20,8 @@ module.exports = {
   archive: true,
 
   sidebar: { mode: 'structuring', collapsable: false },
-  pageStyle: 'line',
+  // Keep left sidebar visible so notes can jump back to siblings / parent sections.
+  // ('line' hides the sidebar until hover, which made parent navigation hard to find.)
   updateBar: {
     showToArticle: true,
   },

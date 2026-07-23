@@ -102,6 +102,66 @@ function mountGate() {
   })
 }
 
+function resolveParentNav(path) {
+  if (!path || path === '/') return null
+  if (path === '/cloud/' || path === '/cloud') {
+    return { href: '/', label: '返回首页' }
+  }
+  if (
+    path.startsWith('/pages/k8s-') ||
+    path.startsWith('/pages/docker-') ||
+    path === '/pages/k8s-overview/'
+  ) {
+    return { href: '/cloud/', label: '返回云原生目录' }
+  }
+  if (path.startsWith('/pages/brief-archive')) {
+    return { href: '/', label: '返回首页' }
+  }
+  if (
+    path.startsWith('/categories') ||
+    path.startsWith('/tags') ||
+    path.startsWith('/archives')
+  ) {
+    return { href: '/', label: '返回首页' }
+  }
+
+  // Prefer theme breadcrumb parent (e.g. 云原生 / K8S → catalogue anchors)
+  const crumbs = Array.from(document.querySelectorAll('.breadcrumbs a')).filter(
+    (a) => a.getAttribute('href') && a.getAttribute('href') !== '/',
+  )
+  if (crumbs.length > 0) {
+    const last = crumbs[crumbs.length - 1]
+    const label = (last.textContent || '').trim() || '上一级'
+    return { href: last.getAttribute('href'), label: `返回 ${label}` }
+  }
+
+  return { href: '/', label: '返回首页' }
+}
+
+function mountParentBack(path) {
+  const existing = document.getElementById('allen-parent-back')
+  if (existing) existing.remove()
+
+  const parent = resolveParentNav(path)
+  if (!parent) return
+
+  const bar = document.createElement('div')
+  bar.id = 'allen-parent-back'
+  bar.className = 'allen-parent-back'
+  bar.innerHTML = `
+    <a class="allen-parent-link" href="${parent.href}">← ${parent.label}</a>
+    <span class="allen-parent-sep">·</span>
+    <a href="/">首页</a>
+  `
+
+  const navbar = document.querySelector('header.navbar')
+  if (navbar && navbar.parentNode) {
+    navbar.insertAdjacentElement('afterend', bar)
+  } else {
+    document.body.prepend(bar)
+  }
+}
+
 export default ({ router }) => {
   if (typeof window === 'undefined') return
 
@@ -119,13 +179,25 @@ export default ({ router }) => {
     if (!isAuthed()) mountGate()
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', guard)
-  } else {
-    guard()
+  const refreshParentBack = () => {
+    // Wait a tick so ArticleInfo breadcrumbs are in the DOM.
+    setTimeout(() => {
+      mountParentBack(window.location.pathname)
+    }, 50)
   }
 
-  router.afterEach(() => {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      guard()
+      refreshParentBack()
+    })
+  } else {
     guard()
+    refreshParentBack()
+  }
+
+  router.afterEach((to) => {
+    guard()
+    setTimeout(() => mountParentBack(to.path), 50)
   })
 }
