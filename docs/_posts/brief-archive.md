@@ -11,7 +11,8 @@ editLink: false
 <p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
 
 <ul class="brief-archive-list">
-<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a></li>
+<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a>
+  <span class="headline">OpenAI内部模型安全漏洞引关注，中东局势推升油价破98美元</span></li>
 </ul>
 
 <p><a href="/pages/brief-reader/">→ 阅读最新晚报</a></p>
