@@ -105,6 +105,16 @@ function mountGate() {
 export default ({ router }) => {
   if (typeof window === 'undefined') return
 
+  // /brief/* is static HTML under public/, not a VuePress page.
+  // Vue Router would otherwise SPA-navigate and show theme 404.
+  router.beforeEach((to, from, next) => {
+    if (to.path === '/brief' || to.path.startsWith('/brief/')) {
+      window.location.assign(to.fullPath)
+      return
+    }
+    next()
+  })
+
   const guard = () => {
     if (!isAuthed()) mountGate()
   }
