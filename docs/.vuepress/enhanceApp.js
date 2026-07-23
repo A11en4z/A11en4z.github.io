@@ -162,14 +162,38 @@ function mountParentBack(path) {
   }
 }
 
+function mountBriefReader() {
+  const frame = document.getElementById('brief-reader-frame')
+  if (!frame) return
+  const params = new URLSearchParams(window.location.search)
+  const hash = (window.location.hash || '').replace(/^#/, '')
+  const d =
+    (params.get('d') || '').replace(/\.html$/, '') ||
+    (/^\d{4}-\d{2}-\d{2}$/.test(hash) ? hash : '')
+  const src = d ? `/brief/${d}/${d}.html` : '/brief/'
+  if (frame.getAttribute('src') !== src) frame.src = src
+  const label = document.getElementById('brief-reader-date')
+  if (label) label.textContent = d ? `· ${d}` : '· 最新'
+
+  // #region agent log
+  fetch('http://127.0.0.1:7769/ingest/fa9e3a93-d370-45dc-b725-74bc6a918a85',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'0010a9'},body:JSON.stringify({sessionId:'0010a9',runId:'post-fix',hypothesisId:'H-D',location:'enhanceApp.js:mountBriefReader',message:'brief reader mounted in VuePress shell',data:{href:location.href,iframeSrc:src,date:d||null,hasNavbar:!!document.querySelector('header.navbar')},timestamp:Date.now()})}).catch(()=>{})
+  // #endregion
+}
+
 export default ({ router }) => {
   if (typeof window === 'undefined') return
 
   // /brief/* is static HTML under public/, not a VuePress page.
   // Vue Router would otherwise SPA-navigate and show theme 404.
+  // Prefer keeping users inside VuePress via /pages/brief-reader/.
   router.beforeEach((to, from, next) => {
-    if (to.path === '/brief' || to.path.startsWith('/brief/')) {
-      window.location.assign(to.fullPath)
+    if (to.path === '/brief' || to.path === '/brief/') {
+      next({ path: '/pages/brief-reader/', replace: true })
+      return
+    }
+    const m = to.path.match(/^\/brief\/(\d{4}-\d{2}-\d{2})(?:\/.*)?$/)
+    if (m) {
+      next({ path: '/pages/brief-reader/', hash: `#${m[1]}`, replace: true })
       return
     }
     next()
@@ -183,6 +207,7 @@ export default ({ router }) => {
     // Wait a tick so ArticleInfo breadcrumbs are in the DOM.
     setTimeout(() => {
       mountParentBack(window.location.pathname)
+      mountBriefReader()
     }, 50)
   }
 
@@ -198,6 +223,25 @@ export default ({ router }) => {
 
   router.afterEach((to) => {
     guard()
-    setTimeout(() => mountParentBack(to.path), 50)
+    setTimeout(() => {
+      mountParentBack(to.path)
+      mountBriefReader()
+    }, 50)
+
+    // #region agent log
+    setTimeout(() => {
+      const panels = document.getElementById('allen-home-panels')
+      const mainLeft = document.querySelector('.main-left')
+      const features = document.querySelector('.features')
+      const hero = document.querySelector('.hero')
+      fetch('http://127.0.0.1:7769/ingest/fa9e3a93-d370-45dc-b725-74bc6a918a85',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'0010a9'},body:JSON.stringify({sessionId:'0010a9',runId:'post-fix',hypothesisId:'H-E',location:'enhanceApp.js:afterEach',message:'homepage slot probe',data:{path:to.path,hasPanels:!!panels,hasFeatures:!!features,featureCount:features?features.querySelectorAll('.feature').length:0,hasHero:!!hero,mainLeftTextLen:mainLeft?(mainLeft.textContent||'').trim().length:null,hasBriefReader:!!document.getElementById('brief-reader-frame'),hasNavbar:!!document.querySelector('header.navbar')},timestamp:Date.now()})}).catch(()=>{})
+    }, 120)
+    // #endregion
+  })
+
+  window.addEventListener('hashchange', () => {
+    if (window.location.pathname.indexOf('/pages/brief-reader') === 0) {
+      mountBriefReader()
+    }
   })
 }

@@ -2,11 +2,11 @@
 module.exports = [
   {
     "text": "最新晚报",
-    "link": "/brief/"
+    "link": "/pages/brief-reader/"
   },
   {
     "text": "2026-07-23",
-    "link": "/brief/2026-07-23/2026-07-23.html"
+    "link": "/pages/brief-reader/#2026-07-23"
   },
   {
     "text": "全部归档 →",

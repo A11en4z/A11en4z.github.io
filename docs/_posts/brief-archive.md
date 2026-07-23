@@ -11,10 +11,10 @@ editLink: false
 <p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
 
 <ul class="brief-archive-list">
-<li><a href="/brief/2026-07-23/2026-07-23.html">2026-07-23</a></li>
+<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a></li>
 </ul>
 
-<p><a href="/brief/">→ 阅读最新晚报</a></p>
+<p><a href="/pages/brief-reader/">→ 阅读最新晚报</a></p>
 
 <style>
 .brief-archive-meta { color: #888; font-size: 0.92rem; }

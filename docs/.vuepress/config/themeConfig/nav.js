@@ -4,7 +4,7 @@ module.exports = [
   { text: '首页', link: '/' },
   {
     text: 'AI 资讯',
-    link: '/brief/',
+    link: '/pages/brief-reader/',
     items: briefNav,
   },
   {

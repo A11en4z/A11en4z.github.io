@@ -704,6 +704,27 @@
     <a href="/cloud/">运维笔记</a>
   </div>
 </nav>
+<script>
+(function(){
+  // Hide mini-chrome when embedded in Allen Space brief-reader iframe
+  try {
+    if (window.self !== window.top) {
+      var n = document.querySelector('.allen-space-chrome');
+      var s = document.getElementById('allen-space-chrome-style');
+      if (n) n.style.display = 'none';
+      if (s) s.remove();
+    }
+  } catch (e) {}
+  // #region agent log
+  try {
+    var el = document.querySelector('.allen-space-chrome');
+    var r = el ? el.getBoundingClientRect() : null;
+    var cs = el ? getComputedStyle(el) : null;
+    fetch('http://127.0.0.1:7769/ingest/fa9e3a93-d370-45dc-b725-74bc6a918a85',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'0010a9'},body:JSON.stringify({sessionId:'0010a9',runId:'post-fix',hypothesisId:'H-A',location:'brief-chrome',message:'brief chrome visibility',data:{href:location.href,inIframe:window.self!==window.top,hasChrome:!!el,display:cs&&cs.display,height:r&&r.height},timestamp:Date.now()})}).catch(function(){});
+  } catch (e) {}
+  // #endregion
+})();
+</script>
 
 <main id="top">
   <header class="report-header">
