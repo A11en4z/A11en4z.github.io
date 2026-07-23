@@ -11,7 +11,8 @@ editLink: false
 <p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
 
 <ul class="brief-archive-list">
-<li><a href="/brief/2026-07-23/2026-07-23.html">2026-07-23</a></li>
+<li><a href="/brief/2026-07-23/2026-07-23.html">2026-07-23</a>
+  <span class="headline">OpenAI模型越狱事件震动业界，能源市场因伊朗局势剧烈波动</span></li>
 </ul>
 
 <p><a href="/brief/">→ 阅读最新晚报</a></p>
