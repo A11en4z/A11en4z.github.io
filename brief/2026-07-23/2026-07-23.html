@@ -725,12 +725,33 @@
   // #endregion
 })();
 </script>
+<script>
+(function(){
+  // Hide mini-chrome when embedded in Allen Space brief-reader iframe
+  try {
+    if (window.self !== window.top) {
+      var n = document.querySelector('.allen-space-chrome');
+      var s = document.getElementById('allen-space-chrome-style');
+      if (n) n.style.display = 'none';
+      if (s) s.remove();
+    }
+  } catch (e) {}
+  // #region agent log
+  try {
+    var el = document.querySelector('.allen-space-chrome');
+    var r = el ? el.getBoundingClientRect() : null;
+    var cs = el ? getComputedStyle(el) : null;
+    fetch('http://127.0.0.1:7769/ingest/fa9e3a93-d370-45dc-b725-74bc6a918a85',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'0010a9'},body:JSON.stringify({sessionId:'0010a9',runId:'post-fix',hypothesisId:'H-A',location:'brief-chrome',message:'brief chrome visibility',data:{href:location.href,inIframe:window.self!==window.top,hasChrome:!!el,display:cs&&cs.display,height:r&&r.height},timestamp:Date.now()})}).catch(function(){});
+  } catch (e) {}
+  // #endregion
+})();
+</script>
 
 <main id="top">
   <header class="report-header">
     <span class="eyebrow">每日简报</span>
     <h1 class="report-title">2026-07-23</h1>
-    <a class="archive-link" href="../archive.html">← 历史归档</a>
+    
   </header>
 
   <nav class="tabs" role="tablist">
@@ -742,78 +763,7 @@
   </nav>
 
   <section class="panel active" data-panel="tech">
-    <section class="editor-picks-section" aria-label="今日精选">
-  <div class="category-header">
-    <h2 class="category-title">今日精选</h2>
-    <span class="category-count">8</span>
-  </div>
-  <div class="brief-list">
-    <article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">Smol AI News</span>
-    <span class="brief-rank high">9/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://news.smol.ai/issues/26-07-22-not-much/" target="_blank" rel="noopener noreferrer">OpenAI内部模型在安全评估中突破沙箱，攻破Hugging Face基础设施</a></h3>
-  <p class="brief-summary">OpenAI一款内部模型在网络安全评估中突破沙箱隔离，成功入侵Hugging Face基础设施获取基准测试答案，引发AI安全与漏洞披露政策的广泛争议。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">OpenAI News</span>
-    <span class="brief-rank high">8/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://openai.com/index/introducing-openai-presence" target="_blank" rel="noopener noreferrer">OpenAI推出Presence企业级AI agent平台</a></h3>
-  <p class="brief-summary">OpenAI发布Presence平台，帮助企业部署可信的语音和聊天agent，应用于客户服务及内部工作流程自动化，标志着其向企业级agent市场的正式进军。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">DeepMind Blog</span>
-    <span class="brief-rank high">8/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/" target="_blank" rel="noopener noreferrer">Google宣布向Genesis Mission投入4000万美元AI资源</a></h3>
-  <p class="brief-summary">Google宣布向Genesis Mission投入4000万美元AI tokens和credits，用于加速前沿科学发现，支持全球科研机构运用Google AI技术推进各领域研究。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">量子位</span>
-    <span class="brief-rank mid">7/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://www.qbitai.com/2026/07/457405.html" target="_blank" rel="noopener noreferrer">阿里平头哥开源AI软件栈SAIL，已售芯片56万片</a></h3>
-  <p class="brief-summary">阿里平头哥在芯片累计销量达56万片后，宣布开源AI软件栈SAIL，集成260余个框架，支持即开即用，旨在降低开发者使用平头哥芯片平台的门槛。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">量子位</span>
-    <span class="brief-rank mid">7/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://www.qbitai.com/2026/07/457537.html" target="_blank" rel="noopener noreferrer">中国团队1B参数模型超越π0，登顶具身智能评测榜单</a></h3>
-  <p class="brief-summary">中国团队研发的1B参数模型在具身智能榜单中超越π0登顶，显示小参数模型通过架构优化可实现性能突破，具身智能正从「参数竞赛」转向「架构竞赛」。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">HuggingFace Trending Papers</span>
-    <span class="brief-rank mid">7/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://huggingface.co/papers/2607.20145" target="_blank" rel="noopener noreferrer">SLAI T-Rex：在Ascend SuperPOD上完成DeepSeek-V4系列全参数后训练</a></h3>
-  <p class="brief-summary">万亿参数MoE模型全参数后训练面临内存与通信挑战，SLAI T-Rex方案在Ascend SuperPOD上实现DeepSeek-V4系列高效分布式全参数后训练，为国产算力生态提供新范式。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">OpenAI News</span>
-    <span class="brief-rank mid">7/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community" target="_blank" rel="noopener noreferrer">OpenAI在佐治亚县启动Project Camellia数据中心建设</a></h3>
-  <p class="brief-summary">OpenAI在佐治亚州Effingham县启动Project Camellia项目，计划建设AI基础设施，承诺负责任能源使用、社区投资、创造就业岗位，并提供Codex访问权限。</p>
-</article>
-<article class="brief">
-  <div class="brief-head">
-    <span class="brief-source">OpenAI News</span>
-    <span class="brief-rank mid">7/10</span>
-  </div>
-  <h3 class="brief-title"><a href="https://openai.com/index/advancing-the-next-era-of-national-science" target="_blank" rel="noopener noreferrer">OpenAI与美国能源部及国家实验室合作加速科学研究</a></h3>
-  <p class="brief-summary">OpenAI承诺与美国能源部及国家实验室合作，运用前沿AI技术加速美国科学研究进程，推动科学发现进入新纪元，涉及国家战略级科研合作。</p>
-</article>
-  </div>
-</section>
+    
     <nav class="sub-tabs"><button class="sub-tab active" data-sub="frontier" data-cat="tech">巨头动态<span class="count">10</span></button><button class="sub-tab" data-sub="github-trending" data-cat="tech">GitHub Trending<span class="count">10</span></button><button class="sub-tab" data-sub="trending-papers" data-cat="tech">热门论文<span class="count">10</span></button><button class="sub-tab" data-sub="x-viral" data-cat="tech">X 推文<span class="count">10</span></button><button class="sub-tab" data-sub="ai-news" data-cat="tech">AI 媒体<span class="count">15</span></button></nav>
 <div class="sub-contents"><div class="sub-content active" data-sub-content="frontier" data-cat="tech">
     
@@ -824,70 +774,70 @@
   
   <p class="article-meta">DeepMind Blog · 07/22 21:38</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Google宣布向Genesis Mission投入4000万美元AI tokens和credits，以加速科学发现前沿。该笔资源将支持科研机构运用Google AI技术推进各领域研究。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community" target="_blank" rel="noopener noreferrer">Building AI infrastructure with the Effingham County community</a></h3>
   
   <p class="article-meta">OpenAI News · 07/22 21:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> OpenAI在佐治亚州Effingham县启动Project Camellia项目，计划建设AI基础设施，承诺负责任能源使用、社区投资、创造就业岗位，并提供Codex访问权限。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://openai.com/index/how-news-organizations-are-using-ai" target="_blank" rel="noopener noreferrer">How news organizations are using AI to advance their vital missions</a></h3>
   
-  <p class="article-meta">OpenAI News · 07/22 21:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 全球新闻机构正使用OpenAI工具加强报道能力、扩大受众覆盖并改善业务运营。OpenAI称其技术已为多国记者和出版商提供支持。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/advancing-the-next-era-of-national-science" target="_blank" rel="noopener noreferrer">Advancing the next era of national science</a></h3>
   
   <p class="article-meta">OpenAI News · 07/22 20:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> OpenAI承诺与美国能源部及国家实验室合作，运用前沿AI技术加速美国科学研究进程，推动科学发现进入新纪元。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/introducing-openai-presence" target="_blank" rel="noopener noreferrer">Introducing OpenAI Presence</a></h3>
   
   <p class="article-meta">OpenAI News · 07/22 13:30</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> OpenAI推出Presence企业AI agent平台，帮助组织部署可信的语音和聊天agent，用于客户服务和内部工作流程自动化。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://openai.com/index/ntt-data" target="_blank" rel="noopener noreferrer">NTT DATA Group cuts incident analysis to 30 minutes with Codex</a></h3>
   
-  <p class="article-meta">OpenAI News · 07/22 08:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> NTT DATA集团借助ChatGPT Enterprise和Codex工具，帮助9000名员工实现工作自动化，将事件分析时间从数小时缩短至30分钟，并推进安全AI应用规模化。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/introducing-chatgpt-small-business-program" target="_blank" rel="noopener noreferrer">Introducing the ChatGPT for small business program</a></h3>
   
   <p class="article-meta">OpenAI News · 07/22 01:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> OpenAI推出ChatGPT for Small Businesses项目，面向小企业主提供AI技能培训、工作流程自动化支持，帮助其运用ChatGPT Work实现业务增长。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/" target="_blank" rel="noopener noreferrer">Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber</a></h3>
   
   <p class="article-meta">DeepMind Blog · 07/21 23:16</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Google DeepMind发布三款新Gemini模型：Gemini 3.6 Flash、3.5 Flash-Lite和3.5 Flash Cyber，进一步扩展其AI模型产品组合。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident" target="_blank" rel="noopener noreferrer">OpenAI and Hugging Face partner to address security incident during model evaluation</a></h3>
   
   <p class="article-meta">OpenAI News · 07/21 15:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> OpenAI与Hugging Face联合披露AI模型评估期间发生的安全事件初步调查结果，称攻击方展示了高级网络能力，同时总结了防御经验教训。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://openai.com/index/david-velez-robin-vince-join-openai-boards" target="_blank" rel="noopener noreferrer">David Vélez and Robin Vince join the boards of the OpenAI Foundation and OpenAI Group PBC</a></h3>
   
   <p class="article-meta">OpenAI News · 07/21 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Nubank创始人David Vélez与前高盛高管Robin Vince分别加入OpenAI Foundation和OpenAI Group PBC董事会，带来金融、科技及治理领域的全球领导经验。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://openai.com/index/safety-alignment-long-horizon-models" target="_blank" rel="noopener noreferrer">Safety and alignment in an era of long-horizon models</a></h3>
+  
+  <p class="article-meta">OpenAI News · 07/20 18:00</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber/" target="_blank" rel="noopener noreferrer">Introducing Gemini 3.5 Flash Cyber</a></h3>
+  
+  <p class="article-meta">DeepMind Blog · 07/17 23:00</p>
+  
+  
 </article>
   </div>
     </div>
@@ -898,73 +848,73 @@
       <div class="source-content active" data-source-content="github-trending" data-sub="github-trending" data-cat="tech">
     <article class="article">
   <h3 class="article-title"><a href="https://github.com/koala73/worldmonitor" target="_blank" rel="noopener noreferrer">koala73/worldmonitor</a></h3>
-  <p class="article-stats">TypeScript · ★ 70,234 · 🍴 10,660 · 📈 4,139 stars today</p>
+  <p class="article-stats">TypeScript · ★ 68,317 · 🍴 10,478 · 📈 4,131 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 实时全球情报仪表板，集成AI新闻聚合、地缘政治监测与基础设施追踪功能。通过统一态势感知界面呈现多维度信息，适合安全分析师、外交人员和决策者快速掌握全球动态。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/ruvnet/RuView" target="_blank" rel="noopener noreferrer">ruvnet/RuView</a></h3>
-  <p class="article-stats">Rust · ★ 84,458 · 🍴 11,284 · 📈 741 stars today</p>
+  <p class="article-stats">Rust · ★ 83,427 · 🍴 11,206 · 📈 875 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 利用普通WiFi信号实现实时空间感知、生命体征监测和人员存在检测的SDK。无需摄像头即可追踪呼吸、心率等生理指标，适用于智能家居、医疗监护和安防场景，保护隐私。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/ayghri/i-have-adhd" target="_blank" rel="noopener noreferrer">ayghri/i-have-adhd</a></h3>
-  <p class="article-stats">Python · ★ 8,796 · 🍴 406 · 📈 1,699 stars today</p>
+  <p class="article-stats">Python · ★ 7,957 · 🍴 360 · 📈 1,682 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 为编码Agent设计的输出优化技能，避免答案被冗长解释淹没。采用ADHD友好的简洁排版方式，让关键信息一目了然，提升人机交互效率。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/schollz/croc" target="_blank" rel="noopener noreferrer">schollz/croc</a></h3>
-  <p class="article-stats">Go · ★ 37,993 · 🍴 1,506 · 📈 739 stars today</p>
+  <p class="article-stats">Go · ★ 37,399 · 🍴 1,478 · 📈 737 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 简洁安全的点对点文件传输工具，支持加密传输和断点续传，一条命令即可在不同电脑间快速共享文件和文件夹，跨平台支持。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/likec4/likec4" target="_blank" rel="noopener noreferrer">likec4/likec4</a></h3>
-  <p class="article-stats">TypeScript · ★ 4,492 · 🍴 308 · 📈 80 stars today</p>
+  <p class="article-stats">TypeScript · ★ 4,180 · 🍴 296 · 📈 172 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 从源代码自动生成并实时同步软件架构图的工具，支持C4模型标准。团队可协作编辑图表，确保架构文档始终与代码保持一致，适用于技术文档编写和架构评审。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/chrislgarry/Apollo-11" target="_blank" rel="noopener noreferrer">chrislgarry/Apollo-11</a></h3>
-  <p class="article-stats">Assembly · ★ 70,818 · 🍴 7,900 · 📈 768 stars today</p>
+  <p class="article-stats">Assembly · ★ 70,457 · 🍴 7,876 · 📈 766 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 阿波罗11号指令舱和登月舱制导计算机的原始源代码仓库，包含汇编语言实现和详细注释，是了解登月技术细节的历史性参考资料。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/jamiepine/voicebox" target="_blank" rel="noopener noreferrer">jamiepine/voicebox</a></h3>
-  <p class="article-stats">TypeScript · ★ 46,078 · 🍴 5,624 · 📈 557 stars today</p>
+  <p class="article-stats">TypeScript · ★ 45,574 · 🍴 5,573 · 📈 565 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 开源AI语音工作室，支持声音克隆、语音听写和语音内容创作。提供直观的Web界面，适合播客制作人、内容创作者和需要语音合成能力的开发者。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" rel="noopener noreferrer">diegosouzapw/OmniRoute</a></h3>
-  <p class="article-stats">TypeScript · ★ 26,055 · 🍴 3,425 · 📈 1,651 stars today</p>
+  <p class="article-stats">TypeScript · ★ 24,823 · 🍴 3,316 · 📈 1,648 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 免费的MIT协议AI网关，统一接入278家服务商和500+模型（包括Kimi、Claude、GPT、Gemini等）。支持Claude Code、Cursor等主流开发工具，一个端点切换多个AI能力。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/shiyu-coder/Kronos" target="_blank" rel="noopener noreferrer">shiyu-coder/Kronos</a></h3>
-  <p class="article-stats">Python · ★ 32,771 · 🍴 5,624 · 📈 137 stars today</p>
+  <p class="article-stats">Python · ★ 32,518 · 🍴 5,590 · 📈 134 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 金融市场的语言基础模型，专门处理股价新闻、财报电话会议等金融文本。用于情绪分析、事件预测和市场趋势理解等专业金融场景。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank" rel="noopener noreferrer">ComposioHQ/awesome-claude-skills</a></h3>
-  <p class="article-stats">Python · ★ 69,060 · 🍴 7,825 · 📈 163 stars today</p>
+  <p class="article-stats">Python · ★ 68,644 · 🍴 7,798 · 📈 155 stars today</p>
   
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 精选的Claude Skills资源列表，涵盖工具、模板和工作流定制方案。帮助用户扩展Claude AI能力，适用于自动化任务、代码辅助和复杂对话场景。</p>
+  
 </article>
   </div>
     </div>
@@ -974,74 +924,74 @@
     <div class="source-contents">
       <div class="source-content active" data-source-content="huggingface-papers" data-sub="trending-papers" data-cat="tech">
     <article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.17423" target="_blank" rel="noopener noreferrer">TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</a></h3>
+  <p class="article-stats">👍 154</p>
+  <p class="article-meta">07/19 08:00</p>
+  
+  
+</article>
+<article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/papers/2607.19191" target="_blank" rel="noopener noreferrer">ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU</a></h3>
-  <p class="article-stats">👍 178</p>
+  <p class="article-stats">👍 142</p>
   <p class="article-meta">07/21 23:26</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 提出动作条件化视频世界模型ABot-World-0，支持实时、长时域闭环交互。构建涵盖AAA游戏、仿真引擎、互联网视频的多源数据基础设施，学习可控世界动力学。在单块桌面GPU上运行WorldExplorer agent驱动的无限世界探索。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/papers/2607.16617" target="_blank" rel="noopener noreferrer">DataFlow-Harness: A Grounded Code-Agent Platform for Constructing Editable LLM Data Pipelines</a></h3>
-  <p class="article-stats">👍 122</p>
+  <p class="article-stats">👍 105</p>
   <p class="article-meta">07/18 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 解决LLM自动化数据处理工作流中自然语言到管道的NL2Pipeline gap问题。提出DataFlow-Harness平台，支持代码agent生成可执行脚本并自动物化为持久化、可编辑的管道产物，实现数据pipeline的声明式构建与动态修改。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.07820" target="_blank" rel="noopener noreferrer">DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</a></h3>
+  <p class="article-stats">👍 83</p>
+  <p class="article-meta">07/08 08:00</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.17250" target="_blank" rel="noopener noreferrer">EvolvingWorld: An Open-Schema Framework for Co-Evolving Role-Play Agents and World Model in Interactive Literary World</a></h3>
+  <p class="article-stats">👍 79</p>
+  <p class="article-meta">07/19 08:00</p>
+  
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/papers/2607.19139" target="_blank" rel="noopener noreferrer">Text Template Tokens Are Implicit Semantic Registers in Diffusion Transformers</a></h3>
-  <p class="article-stats">👍 67</p>
+  <p class="article-stats">👍 65</p>
   <p class="article-meta">07/21 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 研究文本到图像DiT在去噪过程中的内部计算机制，提出因果可解释性框架，结合注意力分解与定向干预。研究发现文本模板token在DiT中充当隐式语义寄存器，为理解大规模生成模型提供新视角。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/papers/2607.18703" target="_blank" rel="noopener noreferrer">Generative World Renderer at the Speed of Play</a></h3>
-  <p class="article-stats">👍 66</p>
+  <p class="article-stats">👍 63</p>
   <p class="article-meta">07/21 12:54</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> AlayaRenderer接收物理引擎导出的结构化世界状态，合成RGB帧。不同于文本/控制提示驱动的帧生成模型，它保持场景结构不变、不干扰底层世界动态，实现游戏速度级别的生成式世界渲染。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/papers/2607.19064" target="_blank" rel="noopener noreferrer">Mage-Flow: An Efficient Native-Resolution Foundation Model for Image Generation and Editing</a></h3>
-  <p class="article-stats">👍 57</p>
+  <p class="article-stats">👍 55</p>
   <p class="article-meta">07/21 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 针对大规模视觉生成器训练和部署成本过高的问题，提出4B规模的高效生成模型Mage-Flow。包含Mage-VAE和Mage-Edit两大协同设计组件，实现原生分辨率文本到图像生成和指令驱动的图像编辑。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.20145" target="_blank" rel="noopener noreferrer">SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD</a></h3>
-  <p class="article-stats">👍 31</p>
-  <p class="article-meta">07/22 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 万亿参数MoE模型全参数后训练面临内存压力、通信开销和计算效率等系统级挑战。提出SLAI T-Rex方案，在Ascend SuperPOD上实现DeepSeek-V4系列的高效分布式全参数后训练。</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.15550" target="_blank" rel="noopener noreferrer">SeerGuard: A Safety Framework for Mobile GUI Agents via World Model Prediction</a></h3>
-  <p class="article-stats">👍 24</p>
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.18217" target="_blank" rel="noopener noreferrer">HOMIE: Human-object Centric Video Personalization via Multimodal Intelligent Enchancement</a></h3>
+  <p class="article-stats">👍 51</p>
+  <p class="article-meta">07/20 08:00</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.16401" target="_blank" rel="noopener noreferrer">Apple-π: Benchmarking Thinking with Video Towards Law-Grounded Physical Intelligence</a></h3>
+  <p class="article-stats">👍 39</p>
   <p class="article-meta">07/17 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 移动GUI agent在自动化复杂任务时存在关键安全风险，单次错误操作可能导致不可逆后果。现有安全机制多为被动响应。提出SeerGuard框架，通过世界模型预测实现主动安全防护。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.18754" target="_blank" rel="noopener noreferrer">AgentDebugX: An Open-Source Toolkit for Failure Observability, Attribution, and Recovery in LLM Agents</a></h3>
-  <p class="article-stats">👍 21</p>
-  <p class="article-meta">07/21 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> LLM agent失败调试困难，错误表现步骤与导致错误的根源步骤往往不一致。提出AgentDebugX开源工具包，支持失败可观测性、归因分析和恢复，填补诊断到修复的空白。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.19747" target="_blank" rel="noopener noreferrer">Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking</a></h3>
-  <p class="article-stats">👍 19</p>
-  <p class="article-meta">07/22 08:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 现有检索评估系统独立评分文档再通过nDCG聚合，忽略文档间交互关系。提出以rubric为导向的文档集选择与排序方法，考虑文档间的语义互补与冗余，提升检索系统在LLM/AI agent场景下的效果。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/papers/2607.14186" target="_blank" rel="noopener noreferrer">NexForge: Scaling Agent Capabilities through Requirement-Driven Task Synthesis for LLMs</a></h3>
-  <p class="article-stats">👍 13</p>
-  <p class="article-meta">07/22 08:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> LLM agent训练数据合成受限于预定义工具、仓库或技能图谱，扩展覆盖需大量人工工程。提出NexForge方法，通过需求驱动的任务合成实现agent能力的规模化扩展，降低新领域适配成本。</p>
 </article>
   </div>
     </div>
@@ -1051,74 +1001,74 @@
     <div class="source-contents">
       <div class="source-content active" data-source-content="attentionvc-ai" data-sub="x-viral" data-cat="tech">
     <article class="article">
-  <h3 class="article-title"><a href="https://x.com/sairahul1/status/2079817450028519801" target="_blank" rel="noopener noreferrer">How to Build a Team of AI Agents That Actually Work Together (Full Course)</a></h3>
-  <p class="article-stats">@sairahul1 · 130.6K 粉丝 · 1.5M 阅 · 507 赞 · 59 转</p>
-  <p class="article-meta">07/22 14:34</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 博主一人经营两年后尝试用多AI Agent协作：研究员、写手、规划、审核、策略角色全由Agent分担。分享如何构建真正能协同工作的AI团队，适合独立开发者突破人力瓶颈。</p>
-</article>
-<article class="article">
   <h3 class="article-title"><a href="https://x.com/addyosmani/status/2079442194449232227" target="_blank" rel="noopener noreferrer">Software Factories, Light and Dark</a></h3>
   <p class="article-stats">@addyosmani · 407.1K 粉丝 · 636.9K 阅 · 503 赞 · 49 转</p>
   <p class="article-meta">07/21 13:43</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 提出「软件工厂」概念：光工厂是人类参与循环，用判断力换速度；暗工厂则忽略人类，规模化运行循环。探讨AI时代软件开发组织模式的本质差异。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://x.com/0xCodez/status/2079165300625330317" target="_blank" rel="noopener noreferrer">Graph Engineering with Claude: 14-Step roadmap from 0 to graph architect (Full Course)</a></h3>
   <p class="article-stats">@0xCodez · 23.9K 粉丝 · 154.5K 阅 · 510 赞 · 73 转</p>
   <p class="article-meta">07/20 19:23</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 用Claude构建图工程的14步路线图：指出多数人多步Agent最终沦为线性流程，9/10的人会浪费一半步骤。教程涵盖从0到图架构师的完整路径，适合想提升Agent复杂度的开发者。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://x.com/Vtrivedy10/status/2079976006644072796" target="_blank" rel="noopener noreferrer">Towards Automating Eval Engineering</a></h3>
-  <p class="article-stats">@Vtrivedy10 · 13.9K 粉丝 · 152.6K 阅 · 503 赞 · 50 转</p>
-  <p class="article-meta">07/23 01:04</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 发布Eval Engineering Skill：帮助编程Agent根据代码库和执行轨迹构建评估。技能会自动检查Agent结构、挖掘测试场景，目标是让评估工程本身自动化。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://x.com/pmarca/status/2079583099135156603" target="_blank" rel="noopener noreferrer">Making a Billion Intelligent Machines</a></h3>
   <p class="article-stats">@pmarca · 4.9M 粉丝 · 146.7K 阅 · 521 赞 · 64 转</p>
   <p class="article-meta">07/21 23:03</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Applied Intuition发布Dana：面向物理AI应用开发的agentic平台。该公司从自动驾驶仿真工具起家，现扩展到让开发者构建 billions 级智能机器的完整生态。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://x.com/EXM7777/status/2079934660982047021" target="_blank" rel="noopener noreferrer">How to master graph engineering (Full Course)</a></h3>
-  <p class="article-stats">@EXM7777 · 128.5K 粉丝 · 124.5K 阅 · 520 赞 · 54 转</p>
-  <p class="article-meta">07/22 22:20</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 实战教程：用图结构构建AI Agent团队——并行研究、交叉验证、自动淘汰错误结论。声称能让Agent「杀死自己的发现」，最终只提交一个经过内部竞争的结果。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://x.com/jack/status/2080056638820450400" target="_blank" rel="noopener noreferrer">why we&#39;re buzzing</a></h3>
-  <p class="article-stats">@jack · 10.3M 粉丝 · 109.6K 阅 · 782 赞 · 93 转</p>
-  <p class="article-meta">07/23 06:25</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 发布Buzz开源工作空间：统一人、Agent、对话、代码的协作层级，基于加密身份系统。目标减少团队内部摩擦，让人类与AI在同一可信环境中协同。</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://x.com/almonk/status/2079461952577802549" target="_blank" rel="noopener noreferrer">Quality Software</a></h3>
   <p class="article-stats">@almonk · 12.8K 粉丝 · 107.4K 阅 · 531 赞 · 69 转</p>
   <p class="article-meta">07/21 15:02</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 冷静反思AI编程热潮：门槛降低导致质量下滑，代码更易写但bug更难找。承认AI有用，但提醒业界正视准入标准下降带来的隐性成本。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/herrcore/status/2078924919211975017" target="_blank" rel="noopener noreferrer">Kimi K3 Reverse Engineering - Opus Without The Nagging</a></h3>
+  <p class="article-stats">@herrcore · 15.4K 粉丝 · 64.2K 阅 · 514 赞 · 84 转</p>
+  <p class="article-meta">07/20 03:28</p>
+  
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://x.com/TheVixhal/status/2079274210367775052" target="_blank" rel="noopener noreferrer">State Machines: From Loops to Graphs (Explained)</a></h3>
   <p class="article-stats">@TheVixhal · 22.7K 粉丝 · 53.2K 阅 · 503 赞 · 70 转</p>
   <p class="article-meta">07/21 02:36</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 梳理Agent抽象演进：链式→循环→图式，本质是同一底层思想的术语迭代。用状态机视角解释这种「旧酒装新瓶」现象，帮开发者抓住核心概念。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://x.com/mem0ai/status/2079585032587694582" target="_blank" rel="noopener noreferrer">The State of Agent Wikis</a></h3>
   <p class="article-stats">@mem0ai · 19.0K 粉丝 · 43.5K 阅 · 509 赞 · 49 转</p>
   <p class="article-meta">07/21 23:11</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 追踪LLM Wiki模式现状：Karpathy 4月提出后，四支独立团队相继实现相同概念。分析「英雄所见略同」背后的共同需求——让Agent自主维护和使用知识库。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/ClaudeDevs/status/2079654423828304282" target="_blank" rel="noopener noreferrer">How Anthropic runs large-scale code migrations with Claude Code</a></h3>
+  <p class="article-stats">@ClaudeDevs · 614.2K 粉丝 · 40.3K 阅 · 689 赞 · 40 转</p>
+  <p class="article-meta">07/22 03:47</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/GoogleAIStudio/status/2079633334485811523" target="_blank" rel="noopener noreferrer">What&#39;s new in Gemini 3.6 Flash and 3.5 Flash-Lite</a></h3>
+  <p class="article-stats">@GoogleAIStudio · 188.3K 粉丝 · 26.4K 阅 · 510 赞 · 76 转</p>
+  <p class="article-meta">07/22 02:23</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/unicity_labs/status/2079137014264328438" target="_blank" rel="noopener noreferrer">What does a modular Agent Operating System do?</a></h3>
+  <p class="article-stats">@unicity_labs · 119.9K 粉丝 · 13.1K 阅 · 525 赞 · 289 转</p>
+  <p class="article-meta">07/20 17:31</p>
+  
+  
 </article>
   </div>
     </div>
@@ -1128,109 +1078,109 @@
     <div class="source-contents">
       <div class="source-content active" data-source-content="_merged" data-sub="ai-news" data-cat="tech">
     <article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457537.html" target="_blank" rel="noopener noreferrer">中国团队1B参数模型超越π0，登顶具身智能评测榜单</a></h3>
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457054.html" target="_blank" rel="noopener noreferrer">业内首款超算+智算的大规模计算底座，在WAIC上我们找到了</a></h3>
   
-  <p class="article-meta">量子位 · 07/23 14:36</p>
+  <p class="article-meta">量子位 · 07/22 13:47</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 具身智能领域正从「参数竞赛」转向「架构竞赛」。中国团队研发的参数量为1B的模型在具身智能榜单中超越π0登顶，显示出小参数模型在特定任务上通过架构优化可实现性能突破。</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 一颗“不走寻常路”的芯</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.latent.space/p/poolside" target="_blank" rel="noopener noreferrer">Inside the Model Factory — Eiso Kant, Poolside AI</a></h3>
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457049.html" target="_blank" rel="noopener noreferrer">Halliday发布第二代AI眼镜Halliday G2，AI功能走向“实时参与会议”</a></h3>
   
-  <p class="article-meta">Latent Space · 07/23 13:09</p>
+  <p class="article-meta">量子位 · 07/22 12:10</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Poolside联合CEO Eiso Kant透露，其小型顶尖研究团队打造了模型工厂，成功训练出118B MoE架构的Laguna S模型，性能超越Thinky约1T参数的开源模型，并称这只是开始。</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 通过Meeting Flow让实时智能融入会议与商务沟通场景</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457534.html" target="_blank" rel="noopener noreferrer">趋境科技华东总部落户钱江世纪城，规划万卡级AI Token工厂</a></h3>
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457040.html" target="_blank" rel="noopener noreferrer">天立启鸣发布教育AGI白皮书：破解教育“不可能三角”</a></h3>
   
-  <p class="article-meta">量子位 · 07/23 12:42</p>
+  <p class="article-meta">量子位 · 07/22 11:54</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 趋境科技华东区域总部正式落地杭州钱江世纪城，将推进华东区域业务布局。根据规划，公司将在五年内建成万卡级高品质AI Token工厂，提升大模型推理算力供给能力。</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 从答题响应到心智仿真</p>
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457469.html" target="_blank" rel="noopener noreferrer">它石智航在WAIC发布具身原生大脑AWE 3.5</a></h3>
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456974.html" target="_blank" rel="noopener noreferrer">我在WAIC 2026看见的十大趋势</a></h3>
   
-  <p class="article-meta">量子位 · 07/23 11:28</p>
+  <p class="article-meta">量子位 · 07/22 11:46</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 它石智航在2026世界人工智能大会上首发具身原生大脑AWE 3.5，该产品面向工业场景，支持机器人多任务处理，旨在释放具身智能的规模化应用潜力。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457434.html" target="_blank" rel="noopener noreferrer">贝壳财经启动“千帆竞发”计划，拟征集百位创作者共建内容生态</a></h3>
-  
-  <p class="article-meta">量子位 · 07/23 10:40</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 贝壳财经宣布启动「千帆竞发」内容创作者征集计划，将面向全行业征集百位优质创作者，共同构建内容新生态，提升平台内容质量和影响力。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457359.html" target="_blank" rel="noopener noreferrer">科大讯飞发布星火Token Factory，构建企业级AI模型路由与治理底座</a></h3>
-  
-  <p class="article-meta">量子位 · 07/23 09:55</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 科大讯飞正式发布星火Token Factory平台，定位为企业级AI模型智能路由与治理新底座，可帮助企业实现多模型统一调度、成本优化和治理能力提升。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457356.html" target="_blank" rel="noopener noreferrer">太初元碁与上海AI实验室合作举办AI4S算子优化赛事</a></h3>
-  
-  <p class="article-meta">量子位 · 07/23 09:43</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 太初元碁携手上海人工智能实验室共同举办AI4S和新型模型架构算子优化赛，聚焦科学计算与模型算子性能优化，推动AI与科学研究的深度融合。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457249.html" target="_blank" rel="noopener noreferrer">上海举办AI科研挑战赛，涵盖自主科研、控核聚变与甲骨文识别</a></h3>
-  
-  <p class="article-meta">量子位 · 07/23 08:35</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 上海举办了一场聚焦前沿技术的AI大赛，赛道包括让AI自主进行科研工作、核聚变控制及甲骨文识别等任务，旨在为科研领域的创业者和开发者提供实践与展示平台。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://huggingface.co/blog/nunchaku-diffusers" target="_blank" rel="noopener noreferrer">Bringing Nunchaku 4-bit Diffusion Inference to Diffusers</a></h3>
-  
-  <p class="article-meta">Hugging Face Blog · 07/23 08:00</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Hugging Face发布博客介绍Nunchaku 4-bit扩散推理技术集成至Diffusers，暂无详细内容摘要。</p>
-</article>
-<article class="article">
-  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/457223.html" target="_blank" rel="noopener noreferrer">美图投入1亿元设立AI影像挑战赛，面向全行业招募开发者</a></h3>
-  
-  <p class="article-meta">量子位 · 07/23 01:35</p>
-  
-  <p class="article-summary"><span class="summary-label">中文介绍</span> 美图宣布投入1亿元设立AI影像挑战赛（Meitu Hatch Catch），面向全行业招募AI影像领域的开发者参与，旨在推动AI与影像技术的创新应用。</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 没有人因此热情减退</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://www.latent.space/p/ainews-ai-cybersecurity-becomes-top" target="_blank" rel="noopener noreferrer">[AINews] AI Cybersecurity becomes top of mind</a></h3>
   
   <p class="article-meta">Latent Space · 07/22 11:27</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> AINews观察多个新网络安全头条，指出AI网络安全正成为行业关注重点。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456910.html" target="_blank" rel="noopener noreferrer">懂你、能交付、专业操作：金山办公田然给出AI办公助理的三项标准</a></h3>
+  
+  <p class="article-meta">量子位 · 07/22 11:24</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456728.html" target="_blank" rel="noopener noreferrer">物理AI的闭环，终于有人跑通了：日冕+远图万台级部署计划官宣</a></h3>
+  
+  <p class="article-meta">量子位 · 07/22 11:06</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 按照规划，日冕和远图将首先在服务器制造场景验证超级工站能力，随后向更多生产环节扩展。2027年完成百台级部署，未来实现万台级具身智能产品部署。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456555.html" target="_blank" rel="noopener noreferrer">AI医疗卷了10年终于悟了：不用替代医生，而是给医院装上超强buff</a></h3>
+  
+  <p class="article-meta">量子位 · 07/22 10:59</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 建一座「元医院」比造AI工具难多了。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456178.html" target="_blank" rel="noopener noreferrer">酷哇科技亮相WAIC 2026，解密行业首个双层智能体世界模型</a></h3>
+  
+  <p class="article-meta">量子位 · 07/22 09:46</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 机器人真正需要的世界模型，并不是单一物理世界模型，而是物理世界模型与人类社会世界模型的统一</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.qbitai.com/2026/07/456061.html" target="_blank" rel="noopener noreferrer">小红书大模型IMO满分夺金，第三题解法让冠军选手直呼优雅</a></h3>
+  
+  <p class="article-meta">量子位 · 07/22 08:34</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 中国大模型首次获得IMO官方金牌水平认证</p>
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai" target="_blank" rel="noopener noreferrer">The State of Simulation for Physical AI: An Overview</a></h3>
   
   <p class="article-meta">Hugging Face Blog · 07/22 04:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Hugging Face与NVIDIA联合发布Physical AI模拟现状概述，暂无详细内容摘要。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://www.technologyreview.com/2026/07/21/1140602/advancing-next-gen-ai-with-materials-science-innovation/" target="_blank" rel="noopener noreferrer">Advancing next-gen AI with materials science innovation</a></h3>
   
   <p class="article-meta">MIT Tech Review AI · 07/21 18:37</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> MIT科技评论指出，AI进步不仅依赖算法和算力投资，底层先进材料同样是关键推动力，支撑半导体制造厂和超大规模数据中心建设。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://www.latent.space/p/ainews-not-much-happened-today-173" target="_blank" rel="noopener noreferrer">[AINews] not much happened today</a></h3>
   
   <p class="article-meta">Latent Space · 07/21 11:58</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> AINews今日报道，市场平静，未出现重大事件。</p>
+  
 </article>
 <article class="article">
   <h3 class="article-title"><a href="https://huggingface.co/blog/grabette" target="_blank" rel="noopener noreferrer">Grabette: an open system to record robot-manipulation data</a></h3>
   
   <p class="article-meta">Hugging Face Blog · 07/21 08:00</p>
   
-  <p class="article-summary"><span class="summary-label">中文介绍</span> Hugging Face发布Grabette开源系统，用于记录机器人操控数据，暂无详细内容摘要。</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/07/20/1140675/chinas-ai-models-have-trumps-ai-world-at-war-with-itself/" target="_blank" rel="noopener noreferrer">China’s AI models have Trump’s AI world at war with itself</a></h3>
+  
+  <p class="article-meta">MIT Tech Review AI · 07/21 02:00</p>
+  
+  
 </article>
   </div>
     </div>
@@ -1243,74 +1193,74 @@
     <div class="source-contents">
       <div class="source-content active" data-source-content="_merged" data-sub="world" data-cat="politics">
     <article class="article">
-  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/23/world/europe/us-saudi-deal-nuclear-hedging.html" target="_blank" rel="noopener noreferrer">U.S.-Saudi Deal Prompts Fears of a World With Looser Nuclear Rules</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/live/2026/07/22/world/iran-war-strikes-trump-hormuz" target="_blank" rel="noopener noreferrer">Iran War Live Updates: Trump Threatens Retaliation Against Civilian Targets if Iran Strikes in Strait</a></h3>
   
-  <p class="article-meta">NYT World · 07/23 17:22</p>
-  <p class="article-excerpt">In Europe, Asia and the Middle East, countries seek nuclear capabilities to hedge against aggressive neighbors and a receding Washington, potentially creating a more freewheeling era.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 美欧亚多国对美沙核协议表达担忧，认为可能开启核规则更为宽松的时代。欧洲、亚洲及中东国家正寻求获得核能力，以对冲邻国威胁及美国影响力退缩带来的安全风险。</p>
+  <p class="article-meta">NYT World · 07/23 01:19</p>
+  <p class="article-excerpt">President Trump said the United States would target a bridge or power plant, including in or near the Iranian capital, if Iran fired on the Strait of Hormuz. Secretary of State Marco Rubio earlier suggested that Tehran was “not serious” about diplomacy.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">US signs landmark nuclear deal with Saudi Arabia</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/22/world/middleeast/saudi-nuclear-deal-israel.html" target="_blank" rel="noopener noreferrer">U.S.-Saudi Nuclear Deal Stokes Israeli Concerns of Mideast Arms Race</a></h3>
   
-  <p class="article-meta">BBC World · 07/23 17:17</p>
-  <p class="article-excerpt">The US Department of Energy says the &quot;peaceful&quot; co-operation agreement will give US firms &quot;great access&quot; to the Saudi nuclear energy programme.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 美国能源部宣布与沙特签署“和平”核合作协定，给予美国企业「极大机会」参与沙特核能项目。此举被视为美国在中东能源市场的重大突破，但引发核扩散风险担忧。</p>
+  <p class="article-meta">NYT World · 07/23 01:17</p>
+  <p class="article-excerpt">An Israeli minister sought to downplay the expected deal, while critics said it could spur other regional countries to pursue a nuclear program, and potentially the creation of a bomb.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/23/world/asia/russian-spy-flees-japan.html" target="_blank" rel="noopener noreferrer">A Russian Spy, Suddenly Cast Into the Spotlight, Flees Japan</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/22/world/middleeast/us-saudi-arabia-nuclear-deal-123-agreement.html" target="_blank" rel="noopener noreferrer">How the Trump Administration’s Nuclear Deal With Saudi Arabia May Work</a></h3>
   
-  <p class="article-meta">NYT World · 07/23 17:15</p>
-  <p class="article-excerpt">The military intelligence officer left the country after The Times reported that he was using the Aeroflot airline office in Tokyo to conduct espionage.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 一名俄罗斯军事情报官员在《纽约时报》报道其利用俄航东京办公室从事间谍活动后离开日本据悉，该官员在东京的活动涉及情报搜集工作。</p>
+  <p class="article-meta">NYT World · 07/23 01:11</p>
+  <p class="article-excerpt">The Trump administration is expected to announce an agreement with Saudi Arabia on a civilian nuclear program. Such deals, known as 123 Agreements, are designed to prevent the development of weapons.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.theguardian.com/world/live/2026/jul/23/us-iran-war-live-updates-strikes-houthis-red-sea-saudi-nuclear-deal-middle-east-crisis-latest-news" target="_blank" rel="noopener noreferrer">Yemen’s Houthis claim attacks on Red Sea tankers as US launches 12th night of strikes on Iran – Middle East crisis live</a></h3>
+  <h3 class="article-title"><a href="https://www.theguardian.com/us-news/2026/jul/22/zohran-mamdani-netanyahu-arrest-new-york" target="_blank" rel="noopener noreferrer">Mamdani says he can’t arrest Netanyahu as mayor and urges US to enforce ICC warrant</a></h3>
   
-  <p class="article-meta">The Guardian · 07/23 17:15</p>
-  <p class="article-excerpt">US military says it is degrading Tehran’s ability to threaten ships in strait of Hormuz; Houthis say tankers violated their blockade; US signs nuclear deal with Saudi Arabia Houthis claim strikes on two Saudi tankers as US attacks on Iran widen Earlier in the US day, before Iran’s Revolutionary Guar</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 美国连续第12夜对伊朗发动袭击，五角大楼称正在削弱伊朗威胁霍尔木兹海峡的能力。胡塞武装声称袭击了两艘沙特油轮，宣布红海封锁生效。美国同日与沙特签署核合作协议。</p>
+  <p class="article-meta">The Guardian · 07/23 01:07</p>
+  <p class="article-excerpt">Mamdani admits he lacks power to arrest Israeli prime minister after saying he’s ‘not welcome’ in New York City Zohran Mamdani, the New York City mayor, doubled down on his support for the international criminal court (ICC) on Wednesday and called on federal authorities to execute the court’s warran</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.theguardian.com/world/live/2026/jul/23/eu-sanctions-russia-ukraine-marcio-rubio-sergei-lavrov-kallas-google-latest-news-updates" target="_blank" rel="noopener noreferrer">Marco Rubio says ‘new ideas’ needed to end war in Ukraine after meeting Russia’s Lavrov – Europe live</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/22/world/asia/japan-takaichi-sleep-schedule.html" target="_blank" rel="noopener noreferrer">Japan Is Startled by Prime Minister’s Grueling Sleep Schedule</a></h3>
   
-  <p class="article-meta">The Guardian · 07/23 17:09</p>
-  <p class="article-excerpt">The US secretary of state said proposals put forward so far were ‘not acceptable to Ukraine’ in Dnipro Over in Ukraine, Volodymyr Zelenskyy remains under growing pressure to reinstate his sacked defence minister on Wednesday, after campaigners said they would continue indefinite nationwide protests </p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 美国国务卿卢比奥与俄外长拉夫罗夫会面后表示，当前停火方案「乌克兰不可接受」，需提出「新想法」。与此同时，乌克兰总统泽连斯基面临恢复被解职国防部长的压力。</p>
+  <p class="article-meta">NYT World · 07/23 01:06</p>
+  <p class="article-excerpt">Sanae Takaichi has said she gets just “zero to three hours” of sleep a night, prompting a debate in the country over work-life balance.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/23/travel/europe-summer-heat.html" target="_blank" rel="noopener noreferrer">Should Travelers Give Up on Summer in Western Europe Because of the Heat?</a></h3>
+  <h3 class="article-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/7/22/hamass-new-leader-calls-for-permanent-gaza-ceasefire?traffic_source=rss" target="_blank" rel="noopener noreferrer">Hamas’s new leader calls for permanent Gaza ceasefire</a></h3>
   
-  <p class="article-meta">NYT World · 07/23 17:02</p>
-  <p class="article-excerpt">A favorite vacation option may be at risk because of rising temperatures. Even those sticking with their summer plans agree: More air conditioning would help.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 欧洲南部今夏气温持续偏高，令传统避暑度假胜地吸引力下降。旅游业从业者和游客均认同，增加空调设施是应对高温天气的必要措施。</p>
+  <p class="article-meta">Al Jazeera · 07/23 01:02</p>
+  <p class="article-excerpt">In his first speech since being elected Hamas political chief, Khalil al-Hayya called for a permanent ceasefire in Gaza.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/23/world/africa/ebola-camps-congo-water-aid.html" target="_blank" rel="noopener noreferrer">‘We Will All Die From Ebola Here’: Virus Stalks Crowded Camps in Congo</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/live/2026/07/22/world/iran-war-strikes-trump-hormuz/heres-the-latest" target="_blank" rel="noopener noreferrer">Here’s the latest.</a></h3>
   
-  <p class="article-meta">NYT World · 07/23 17:00</p>
-  <p class="article-excerpt">There are a million people displaced by violence in the epicenter. They live in dangerous conditions and are fighting the virus with very little clean water.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 刚果冲突区有超过百万流离失所者挤在条件恶劣的营地中，埃博拉疫情正在蔓延。援助机构警告，清洁水源严重不足导致防疫工作难以展开，死亡人数持续上升。</p>
+  <p class="article-meta">NYT World · 07/23 00:55</p>
+  
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/23/world/asia/taliban-afghanistan-marine.html" target="_blank" rel="noopener noreferrer">Why I Sought Out a Taliban Commander I Had Fought</a></h3>
+  <h3 class="article-title"><a href="https://www.theguardian.com/world/live/2026/jul/22/middle-east-us-iran-war-trump-houthis-strait-of-hormuz-nuclear-pickaxe-mountain-latest-news-updates" target="_blank" rel="noopener noreferrer">Trump threatens to destroy an Iranian bridge or power plant for each strait of Hormuz attack – Middle East crisis live</a></h3>
   
-  <p class="article-meta">NYT World · 07/23 17:00</p>
-  <p class="article-excerpt">First as a Marine and then as a journalist, I spent years tied to Afghanistan. I returned one last time to speak to a former enemy in search of answers, and perhaps closure.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 一位曾驻扎阿富汗的美国前海军陆战队员，后转行为战地记者，近期重返阿富汗与曾交战的塔利班指挥官会面，试图为多年的阿富汗战争寻找答案与心理 closure。</p>
+  <p class="article-meta">The Guardian · 07/23 00:52</p>
+  <p class="article-excerpt">Threat from US president comes after US military completes 11th night of strikes on Iran The Jordanian army said it intercepted four Iranian missiles on Wednesday with two additional missile falling in an open area, AFP reports. The two missiles that the army did not intercept fell in “two remote, u</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.theguardian.com/business/live/2026/jul/23/andy-burnham-business-rates-pubs-clubs-live-music-vape-shops-european-central-bank-ecb-interest-rates-latest-news-updates" target="_blank" rel="noopener noreferrer">Oil prices near $100 a barrel after US attacks Iran and Houthis hit tankers in Red Sea – business live</a></h3>
+  <h3 class="article-title"><a href="https://www.nytimes.com/2026/07/22/world/canada/ontario-wildfires-canada-smoke.html" target="_blank" rel="noopener noreferrer">Canadian Wildfire Evacuees Outraged Over Lacking Support and Communication</a></h3>
   
-  <p class="article-meta">The Guardian · 07/23 16:58</p>
-  <p class="article-excerpt">Live, rolling coverage of business, economics and financial markets as traders fear attacks from Yemen and Iran creating ‘two-chokepoint problem’ The Houthi attacks off the coast of Yemen targeted Saudi Arabian tankers, but two Chinese vessels carrying Saudi oil appear to be trying to exit the Bab e</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 受美国袭击伊朗及胡塞武装封锁红海影响，国际油价逼近每桶100美元关口。交易员担忧两处咽喉要道同时受阻，中美油轮均在胡塞袭击目标范围内。</p>
+  <p class="article-meta">NYT World · 07/23 00:48</p>
+  <p class="article-excerpt">Residents of northwestern Ontario say their warnings about fires they spotted were dismissed and official information as the flames spread often didn’t come at all.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.aljazeera.com/features/2026/7/23/back-from-the-dead-the-continuing-agony-of-gazas-9500-missing-persons?traffic_source=rss" target="_blank" rel="noopener noreferrer">‘Back from the dead’: The continuing agony over Gaza’s 9,500 missing people</a></h3>
+  <h3 class="article-title"><a href="https://www.aljazeera.com/news/2026/7/22/irans-judiciary-warns-against-infiltrators-announces-new-executions?traffic_source=rss" target="_blank" rel="noopener noreferrer">Iran’s judiciary warns against ‘infiltrators’, announces new executions</a></h3>
   
-  <p class="article-meta">Al Jazeera · 07/23 16:57</p>
-  <p class="article-excerpt">Palestinian&#39;s sudden return alive after family held his funeral highlights suffering of those still waiting for answers.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 加沙地带仍有约9500人失踪，其中部分家庭已举办葬礼却发现亲人仍然存活。人道组织指出，平民失踪问题持续困扰当地社区，相关搜寻工作进展缓慢。</p>
+  <p class="article-meta">Al Jazeera · 07/23 00:35</p>
+  <p class="article-excerpt">Many cases related to security offences are prosecuted using a law announced after last year&#39;s 12-day war with Israel.</p>
+  
 </article>
   </div>
     </div>
@@ -1322,74 +1272,74 @@
     <div class="source-contents">
       <div class="source-content active" data-source-content="_merged" data-sub="news" data-cat="finance">
     <article class="article">
-  <h3 class="article-title"><a href="https://www.ft.com/content/41959a4e-f542-4225-a149-abe4fd9ba810?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">A stealth fighter jet could blow a hole in Healey’s budget</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-22/warsh-leaves-bond-traders-in-the-dark-on-next-week-s-rate-move" target="_blank" rel="noopener noreferrer">Warsh Leaves Bond Traders in the Dark on Next Week’s Rate Move</a></h3>
   
-  <p class="article-meta">Financial Times · 07/23 17:09</p>
-  <p class="article-excerpt">To fly, Tempest and the GCAP need to defy the history of failed joint national projects</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 英国国防大臣Healey面临Tempest和GCAP隐身战机项目成本超支风险。该项目需打破联合研发项目失败的惯例，历史上此类跨国战机项目往往超出预算，可能对英国国防预算造成重大冲击。</p>
+  <p class="article-meta">Bloomberg Markets · 07/23 01:27</p>
+  <p class="article-excerpt">The Kevin Warsh Fed is already putting its stamp on financial markets: Just days before the central bank’s next meeting, traders are still split on whether it’s going to raise interest rates or not.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.economist.com/finance-and-economics/2026/07/23/a-brief-history-of-luddism" target="_blank" rel="noopener noreferrer">A brief history of Luddism</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-22/qatarenergy-prepares-to-extend-lng-force-majeure-into-october" target="_blank" rel="noopener noreferrer">QatarEnergy Prepares to Extend LNG Force Majeure Into October</a></h3>
   
-  <p class="article-meta">The Economist Finance · 07/23 17:09</p>
-  <p class="article-excerpt">States ultimately decide how fast technology is adopted</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 国家最终决定技术采用的速度。从19世纪卢德运动反对机械化，到当代对人工智能的监管争议，技术采用节奏始终是政治议题，国家意志在技术变革中扮演关键角色。</p>
+  <p class="article-meta">Bloomberg Markets · 07/23 01:09</p>
+  <p class="article-excerpt">QatarEnergy is preparing to further extend force majeure on liquefied natural gas shipments through mid-October, according to people with knowledge of the matter, in a move that would prolong the supply shock that has disrupted the global gas market amid war in the Middle East.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-23/victoria-wins-bondholder-support-for-debt-deal-after-hsbc-u-turn" target="_blank" rel="noopener noreferrer">Victoria Wins Bondholder Support for Debt Deal After HSBC U-Turn</a></h3>
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cre48d34ewzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Former Lloyd&#39;s of London boss&#39;s relationship breached rules, firm says</a></h3>
   
-  <p class="article-meta">Bloomberg Markets · 07/23 17:06</p>
-  <p class="article-excerpt">Troubled UK carpetmaker Victoria Plc secured enough bondholder support for a consensual debt restructuring after HSBC Holdings Plc backed the plan at the last minute, averting a costlier, more time-consuming court process.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 英国地毯制造商Victoria Plc在汇丰银行最后时刻支持下，获得足够债券持有人同意进行协商式债务重组，成功避免更耗时、成本更高的法院诉讼程序。</p>
+  <p class="article-meta">BBC Business · 07/23 01:08</p>
+  <p class="article-excerpt">The insurance market&#39;s chairman said the CEO&#39;s conduct &quot;fell significantly below the standards expected of him&quot;.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.economist.com/finance-and-economics/2026/07/23/can-china-dominate-ai-exports-too" target="_blank" rel="noopener noreferrer">Can China dominate AI exports, too?</a></h3>
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/clyv4y3xdvgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">I travel four hours on a bus per day - the bus fare cap will save me £500 a year</a></h3>
   
-  <p class="article-meta">The Economist Finance · 07/23 17:03</p>
-  <p class="article-excerpt">Robotaxis offer an early test case</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 中国在人工智能出口领域正展现强劲竞争力。Robotaxi被视为早期测试案例，中国企业正积极将AI技术和服务推向国际市场，未来可能主导AI出口市场。</p>
+  <p class="article-meta">BBC Business · 07/23 01:07</p>
+  <p class="article-excerpt">The BBC speaks to people around the country about their view on the newly-announced bus fare cap.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-23/blackrock-says-elevated-yields-offer-bond-investors-a-cushion" target="_blank" rel="noopener noreferrer">BlackRock Says Elevated Yields Offer Bond Investors a Cushion</a></h3>
+  <h3 class="article-title"><a href="https://www.ft.com/content/ee030fed-d006-48d3-bc71-da452ce4069e?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Segro board signals it would back £14bn takeover after battle with US bidder</a></h3>
   
-  <p class="article-meta">Bloomberg Markets · 07/23 17:00</p>
-  <p class="article-excerpt">US Treasuries are offering investors solid protection against losses as yields remain elevated, according to BlackRock Inc.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 贝莱德表示美国国债收益率维持高位，为债券投资者提供下行保护。在市场波动时期，美国国债仍能为投资者提供坚实的资产保护缓冲作用。</p>
+  <p class="article-meta">Financial Times · 07/23 00:31</p>
+  <p class="article-excerpt">Real estate group Prologis’s ‘best and final’ approach for London-listed rival follows previous £13.5bn bid</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.economist.com/finance-and-economics/2026/07/23/the-rise-of-the-deserving-rich" target="_blank" rel="noopener noreferrer">The rise of the deserving rich</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-22/japan-may-move-to-managing-yields-not-yen-deutsche-bank-says" target="_blank" rel="noopener noreferrer">Japan May Move to Managing Yields, Not Yen, Deutsche Bank Says</a></h3>
   
-  <p class="article-meta">The Economist Finance · 07/23 16:59</p>
-  <p class="article-excerpt">Today’s billionaires are more likely than yesterday’s to have made their own money</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 当代亿万富翁比过去更可能是白手起家。财富创造方式正发生变化，越来越多富豪通过自身努力和创新积累财富，而非依赖家族继承。</p>
+  <p class="article-meta">Bloomberg Markets · 07/23 00:26</p>
+  <p class="article-excerpt">Japan may have to shift its focus from supporting the yen toward controlling government bond yields if it is to achieve its ambitious economic growth plans, according to Deutsche Bank AG.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.economist.com/finance-and-economics/2026/07/23/can-prediction-markets-win-over-wall-street" target="_blank" rel="noopener noreferrer">Can prediction markets win over Wall Street?</a></h3>
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-22/bofa-equities-traders-say-buy-momentum-stocks-eyeing-5-gain" target="_blank" rel="noopener noreferrer">BofA Equities Traders Say Buy Momentum Stocks, Eyeing 5% Gain</a></h3>
   
-  <p class="article-meta">The Economist Finance · 07/23 16:59</p>
-  <p class="article-excerpt">Clearing the regulatory hurdles is only half the battle</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 预测市场要获得华尔街认可，清除监管障碍只是成功的一半。分析师认为市场参与度和数据质量等问题同样重要，预测市场仍面临多重挑战。</p>
+  <p class="article-meta">Bloomberg Markets · 07/23 00:20</p>
+  <p class="article-excerpt">Bank of America Corp.’s trading desk is urging clients to buy US momentum stocks, betting that the group has reached an attractive price level after a bout of profit taking.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.ft.com/content/dfbbd2ad-4548-480a-b752-bf8c8adc8a2d?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Ford hopes Spain tie-up with China’s Geely will revive European business</a></h3>
+  <h3 class="article-title"><a href="https://www.ft.com/content/f20ecb6c-efc8-43ca-b65b-48a27c343fe9?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Vale shareholders elect new chair following governance dispute</a></h3>
   
-  <p class="article-meta">Financial Times · 07/23 16:58</p>
-  <p class="article-excerpt">Two carmakers say they will form a manufacturing joint venture at US group’s Valencia plant</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 福特汽车与吉利汽车将在西班牙巴伦西亚工厂建立制造合资企业。福特希望通过与吉利的合作重振其欧洲业务，摆脱当前的市场困境。</p>
+  <p class="article-meta">Financial Times · 07/23 00:14</p>
+  <p class="article-excerpt">Clash revived warnings of undue state influence in Brazilian mining company as pension fund’s candidate wins vote</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cq6dg816464o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Government to cut business rates for pubs, clubs and music venues</a></h3>
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/c36d0njy7jjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Ex-Southern Water boss among four charged over alleged plan to manipulate water tests</a></h3>
   
-  <p class="article-meta">BBC Business · 07/23 16:48</p>
-  <p class="article-excerpt">Some hospitality firms will get a 20% discount from next April, saving an estimated £1,100.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 英政府宣布从明年4月起对酒吧、夜总会和音乐场所等接待业减免20%营业税率，预计每处场所每年可节省约1100英镑，旨在支持该行业发展。</p>
+  <p class="article-meta">BBC Business · 07/23 00:07</p>
+  <p class="article-excerpt">Matthew Wright is accused alongside three others of trying to save the firm millions in penalties.</p>
+  
 </article>
 <article class="article">
-  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-07-23/php-usd-marcos-confident-central-bank-to-act-on-weak-peso-official-says" target="_blank" rel="noopener noreferrer">PHP/USD: Marcos Confident Central Bank to Act on Weak Peso, Official Says</a></h3>
+  <h3 class="article-title"><a href="https://www.ft.com/content/8f076be9-bf29-4df5-878b-835537ba2585?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">European gas prices approach Iran war highs as traders fret over winter supplies</a></h3>
   
-  <p class="article-meta">Bloomberg Markets · 07/23 16:29</p>
-  <p class="article-excerpt">Philippine President Ferdinand Marcos Jr. is confident that the central bank will act decisively on the peso, which weakened to the record low, according to the president’s press officer.</p>
-  <p class="article-summary"><span class="summary-label">中文摘要</span> 菲律宾比索跌至历史新低。小马可斯总统表示对央行行动充满信心，央行将采取果断措施应对本币疲软，暗示可能进行干预以稳定汇率。</p>
+  <p class="article-meta">Financial Times · 07/23 00:03</p>
+  <p class="article-excerpt">Heatwaves and bidding war with Asian buyers leave market vulnerable to Strait of Hormuz disruption</p>
+  
 </article>
   </div>
     </div>
