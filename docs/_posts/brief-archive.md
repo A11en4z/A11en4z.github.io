@@ -1,6 +1,6 @@
 ---
 title: AI 资讯归档
-date: 2026-07-23 00:00:00
+date: 2026-07-25 00:00:00
 permalink: /pages/brief-archive/
 sidebar: false
 article: false
@@ -8,10 +8,11 @@ comment: false
 editLink: false
 ---
 
-<p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
+<p class="brief-archive-meta">1 期晚报 · 最新 2026-07-25</p>
 
 <ul class="brief-archive-list">
-<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a></li>
+<li><a href="/pages/brief-reader/#2026-07-25">2026-07-25</a>
+  <span class="headline">Vivix单卡突破万级视频token/s，Claude Opus 5对标Fable价格减半，欧洲野火超22万人撤离</span></li>
 </ul>
 
 <p><a href="/pages/brief-reader/">→ 阅读最新晚报</a></p>
