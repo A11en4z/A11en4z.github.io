@@ -5,8 +5,8 @@ module.exports = [
     "link": "/pages/brief-reader/"
   },
   {
-    "text": "2026-07-23",
-    "link": "/pages/brief-reader/#2026-07-23"
+    "text": "2026-07-26",
+    "link": "/pages/brief-reader/#2026-07-26"
   },
   {
     "text": "全部归档 →",
