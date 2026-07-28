@@ -1,0 +1,156 @@
+{
+  "hero_headline": "Kimi K3开源震动全球AI格局，芯片股暴跌与地缘冲突同日升温",
+  "daily_overview": "2026年7月28日，AI领域迎来标志性事件：Moonshot发布Kimi K3开源模型，以2.8万亿参数的混合专家架构刷新全球性能榜单，成为首个登顶全球榜首的中国开源模型，黄仁勋随即宣布向Ilya投资50亿美元押注Scaling路线，AI竞争进入新阶段。财经层面，AI芯片股遭遇抛售潮，韩国Kospi指数盘中暴跌8%触发熔断，新兴市场股指跌至三个月低位，奔驰因中国市场下滑大幅下调全年预期。政治层面，日本九州6.8级地震触发海啸预警，欧洲南法与西班牙野火蔓延迫使数千人撤离，美中围绕AI制裁互相威胁反制，全球地缘风险与科技竞争同步升温。",
+  "tech_briefs": [
+    {
+      "title": "Kimi K3开源模型发布登顶全球榜首",
+      "url": "https://www.qbitai.com/2026/07/461949.html",
+      "source": "量子位",
+      "summary": "Moonshot发布Kimi K3开源模型，拥有2.8万亿参数、1040亿激活参数、896名专家和100万token上下文窗口，具备原生视觉理解能力，性能对标闭源前沿模型，成为首个登顶全球榜首的中国开源大模型，多家媒体称之为「七年间算力增长22580倍」。",
+      "importance": 10
+    },
+    {
+      "title": "黄仁勋50亿美元押注Ilya，Scaling路线获顶级资本认可",
+      "url": "https://www.qbitai.com/2026/07/461911.html",
+      "source": "量子位",
+      "summary": "英伟达CEO黄仁勋宣布向Ilya Sutskever新公司投资50亿美元，Ilya表示将加大Scaling投入。此前OpenAI联合创始人的身份使这笔投资被视为AIScaling派的重大胜利，业界预期将加速下一代大模型训练。",
+      "importance": 9
+    },
+    {
+      "title": "AI芯片股暴跌韩国Kospi指数熔断",
+      "url": "https://www.bbc.co.uk/news/articles/cly8zng43npo",
+      "source": "BBC Business",
+      "summary": "投资者持续抛售AI芯片股，韩国Kospi指数周二早盘暴跌8%，交易一度暂停。亚洲科技股下滑拖累新兴市场股指跌至四个月最低，油价回落为欧洲市场提供部分缓冲。",
+      "importance": 8
+    },
+    {
+      "title": "Anthropic Claude用户对话被曝公开可访问",
+      "url": "https://www.bbc.co.uk/news/articles/cly5qgjk5ywo",
+      "source": "BBC Business",
+      "summary": "研究人员发现数百个Anthropic Claude聊天记录可被公开访问，引发AI隐私与数据安全担忧。Anthropic尚未就此事公开发表回应，事件正值AI企业数据治理压力加剧之际。",
+      "importance": 7
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "奔驰下调全年预期，中国豪华车市场持续萎靡",
+      "url": "https://www.ft.com/content/2d357713-ddb1-4a93-8f7b-a84947e6996d",
+      "source": "Financial Times",
+      "summary": "梅赛德斯-奔驰因中国市场销量持续下滑，下调全年盈利预期，成为大众、宝马之后又一家发出警告的德国车企。分析师指出中国本土品牌竞争加剧正在蚕食传统豪华品牌市场份额。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "老铺黄金市值蒸发21亿美元",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-28/chinese-luxury-jeweler-sheds-2-1-billion-on-66-growth-outlook",
+      "source": "Bloomberg Markets",
+      "summary": "中国珠宝商老铺黄金周二市值缩水21亿美元，此前公司预警销售增速放缓，令押注中国新消费品牌的投资者感到不安。公司此前曾被视为中国最热门消费品牌之一。",
+      "importance": 7
+    },
+    {
+      "title": "汇丰渣打资深财富高管印度区离职",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-28/stanchart-sees-exit-of-several-top-wealth-executives-in-india",
+      "source": "Bloomberg Markets",
+      "summary": "渣打银行印度业务多名资深高管离职，该行正在重组财富管理业务并退出大众零售银行业务。知情人士称离职与战略方向调整相关，汇丰在印度市场面临竞争加剧压力。",
+      "importance": 6
+    },
+    {
+      "title": "印度加强铁矿石出口质量管控",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-28/indian-tax-crackdown-threatens-to-slow-exports-of-low-grade-ore",
+      "source": "Bloomberg Markets",
+      "summary": "印度顶级铁矿石产区卡纳塔克邦加强质量检查，此前发现部分矿商低报矿石品位以逃避特许权使用费。新规可能影响全球低品位铁矿石供应，对依赖印度矿的钢铁企业形成成本压力。",
+      "importance": 6
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "日本九州6.8级地震触发海啸预警",
+      "url": "https://www.nytimes.com/live/2026/07/28/world/japan-earthquake-kumamoto-tsunami",
+      "source": "NYT World",
+      "summary": "日本熊本县附近海域发生6.8级地震，引发海啸预警，震区报告火灾与人员受伤，日本NHK称已观察到海啸波动。目前海啸预警已解除，核电站未受影响。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "法西野火蔓延数千人撤离，热浪来袭增加扑救难度",
+      "url": "https://www.npr.org/2026/07/28/g-s1-135828/europe-wildfires",
+      "source": "NPR World",
+      "summary": "法国和西班牙野火持续蔓延，法国波尔多附近大火已迫使近4000人撤离。法国总统马克龙警告「必须坚持」，西班牙首相桑切斯称未来数小时形势严峻，新一波热浪即将来袭进一步威胁消防员控制火势。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "美中互相警告制裁与反制，AI竞争升级为外交对峙",
+      "url": "https://www.dw.com/zh/美国警告制裁中国ai公司-北京反控美企蒸馏模型并威胁反制/a-78133474",
+      "source": "DW 中文",
+      "summary": "中国商务部指责美国AI企业在模型训练中采用中国模型进行「蒸馏」，并警告若美国对中国AI企业实施限制，北京将采取必要反制措施。两国AI摩擦从技术竞争正式升级为外交层面博弈。",
+      "importance": 9
+    }
+  ],
+  "editor_note": "Kimi K3开源事件与芯片股暴跌看似矛盾，实则反映AI产业「模型开源降门槛、硬件需求仍爆发」的双轨趋势。投资者需关注 Scaling 资本开支与模型开放对算力需求结构的深层影响。",
+  "keywords": [
+    "Kimi K3",
+    "开源大模型",
+    "AI芯片股",
+    "Scaling",
+    "法西野火",
+    "日本地震",
+    "美中AI博弈",
+    "奔驰中国"
+  ],
+  "tech_editor_picks": [
+    {
+      "title": "Ilya获英伟达50亿美元投资，称将加大Scaling投入",
+      "url": "https://www.qbitai.com/2026/07/461939.html",
+      "source": "量子位",
+      "summary": "AI科学家Ilya Sutskever新公司获英伟达50亿美元注资，这是今年AI领域最大规模融资之一。Ilya表示当前是推进Scaling的关键时机，将加大模型规模扩展力度。",
+      "importance": 10,
+      "lab": ""
+    },
+    {
+      "title": "Kimi K3与Unlimited OCR登顶全球榜单，中国开源模型获国际认可",
+      "url": "https://www.qbitai.com/2026/07/461949.html",
+      "source": "量子位",
+      "summary": "月之暗面发布Kimi K3开源模型，2.8T参数MoE架构含104B激活参数，支持原生视觉和100万token上下文，在权威评测中位列全球第一。Unlimited OCR获第二名。",
+      "importance": 9,
+      "lab": "moonshot"
+    },
+    {
+      "title": "Claude Opus 5: Fable-level performance at Opus price (half Fable)",
+      "url": "https://www.latent.space/p/ainews-claude-opus-5-fable-level",
+      "source": "Latent Space",
+      "summary": "Anthropic发布Claude Opus 5，以Opus一半的价格实现Fable级性能。模型在编码和Agent能力上获高度评价，在Epoch Capabilities评测中表现卓越。",
+      "importance": 8,
+      "lab": "anthropic"
+    },
+    {
+      "title": "Black Forest Labs FLUX 3 - Multimodal Flow Models",
+      "url": "https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal",
+      "source": "Latent Space",
+      "summary": "Black Forest Labs发布FLUX 3多模态流模型，在多项基准测试中超越Seedance 2.0、Gemini Omni和Grok Imagine等竞品，同时推出FLUX-mimic视频-动作机器人模型。",
+      "importance": 8,
+      "lab": "google"
+    },
+    {
+      "title": "The path to artificial superintelligence",
+      "url": "https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/",
+      "source": "MIT Tech Review AI",
+      "summary": "OpenAI提出多智能体AI实现超级智能的路径，当前各专业智能体在医疗场景中分工协作，但跨系统协调仍是主要挑战，需探索更好的机制以实现系统级超级智能。",
+      "importance": 8,
+      "lab": "openai"
+    },
+    {
+      "title": "OpenAI called the Hugging Face attack unprecedented. But we've been here before.",
+      "url": "https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/",
+      "source": "MIT Tech Review AI",
+      "summary": "OpenAI披露其模型遭Hugging Face攻击事件，称之为\"前所未有\"。MIT Tech Review梳理历史先例，揭示开源与闭源模型社区间的深层矛盾和安全争议。",
+      "importance": 7,
+      "lab": "openai"
+    },
+    {
+      "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+      "source": "Hugging Face Blog",
+      "summary": "英伟达发布Cosmos-H-Dreams，将实时生成式仿真技术引入手术机器人领域，通过高保真模拟环境提升手术机器人的训练和操作精度。",
+      "importance": 7,
+      "lab": ""
+    }
+  ]
+}
