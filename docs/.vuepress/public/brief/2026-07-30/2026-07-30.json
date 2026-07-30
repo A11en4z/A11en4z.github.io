@@ -1,0 +1,177 @@
+{
+  "hero_headline": "美伊战火重燃、俄导弹落入波兰，地缘冲突与AI监管双重警报拉响",
+  "daily_overview": "2026年7月30日，全球地缘安全与科技产业同日迎来重大转折。中东方面，美国在伊朗疑似袭击美军后重启对伊打击，约旦拦截入境的伊朗导弹，中东局势骤然升级；欧洲方向，俄罗斯对乌大规模空袭中一枚导弹落入波兰境内、距乌边境仅100公里，北约成员国安全底线受到直接冲击。与此同时，科技领域暗流涌动：OpenAI被曝遭遇开源平台机器速度级网络攻击，多家AI巨头联署公开信呼吁「放缓」AI开发节奏，RSI自优化技术让GPT-5.6实现端侧自动迭代；高通押注个人AI终端寻求增长，三星工程师加速跳槽SK海力士，AI商业化变现压力持续凸显。金融市场上，壳牌因伊朗局势利润翻番创历史次高，阿迪达斯股价因世界杯营销重挫17%，AI收入增速被指「不够快」，科技与能源板块呈现显著分化。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI遭开源平台机器速度级网络攻击",
+      "url": "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
+      "source": "Latent Space",
+      "summary": "OpenAI被指在HuggingFace之外的四个账户遭攻击，企业级安全漏洞引发关注，凸显AI基础设施防护薄弱问题。",
+      "importance": 9
+    },
+    {
+      "title": "多家AI巨头联署呼吁「放慢AI开发节奏」",
+      "url": "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
+      "source": "Latent Space",
+      "summary": "OpenAI、Anthropic、Google DeepMind、Meta等头部企业联署公开信，警告AI系统发展速度超越安全边界，呼吁建立行业减速机制。",
+      "importance": 8
+    },
+    {
+      "title": "OpenAI RSI技术实现GPT-5.6端侧自优化",
+      "url": "https://www.qbitai.com/2026/07/463297.html",
+      "source": "量子位",
+      "summary": "OpenAI RSI焚诀技术使GPT-5.6具备自我优化推理能力，通过RSI机制在推理过程中持续改进输出，降低对外部训练的依赖。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "李飞飞World Labs启动机器人训练项目",
+      "url": "https://www.qbitai.com/2026/07/463217.html",
+      "source": "量子位",
+      "summary": "李飞飞创办的World Labs补齐空间智能最后一块拼图，启动机器人训练项目，旨在让AI理解三维物理世界并执行实体操作任务。",
+      "importance": 7
+    },
+    {
+      "title": "三星工程师加速跳槽SK海力士",
+      "url": "https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/",
+      "source": "MIT Tech Review AI",
+      "summary": "三星半导体部门员工因高强度工作与晋升瓶颈纷纷离职，转投竞争对手SK海力士，反映出韩国存储芯片产业人才竞争加剧。",
+      "importance": 6
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "壳牌利润翻番创历史次高，伊郎局势推升油价",
+      "url": "https://www.bbc.co.uk/news/articles/cpq8n45r5e8o",
+      "source": "BBC Business",
+      "summary": "壳牌二季度利润创历史第二高，霍尔木兹海峡石油运输受阻推升国际油价，中东冲突直接转化为能源巨头业绩红利。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "阿迪达斯股价单日暴跌17%",
+      "url": "https://www.ft.com/content/9c7721e8-06c7-4504-9bcd-b266cda2b33e",
+      "source": "Financial Times",
+      "summary": "阿迪达斯二季度净利润仅增长6%，未达市场预期，主要受世界杯营销支出激增拖累，股价创近年来最大单日跌幅。",
+      "importance": 8
+    },
+    {
+      "title": "信贷投资者蜂拥短债回避利率风险",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-30/credit-buyers-seek-refuge-in-short-dated-debt-to-dodge-rate-risk",
+      "source": "Bloomberg Markets",
+      "summary": "投资者大举涌入短期公司债，锁定当前高收益率同时规避利率波动风险，反映市场对长期债务前景的谨慎情绪。",
+      "importance": 7
+    },
+    {
+      "title": "AI收入增速被指「增长快但不够快」",
+      "url": "https://www.economist.com/finance-and-economics/2026/07/28/ai-revenues-are-growing-fast-but-not-fast-enough",
+      "source": "The Economist Finance",
+      "summary": "尽管AI相关收入增长迅猛，但数万亿投资回报仍存不确定性，分析师质疑当前变现速度能否支撑高估值。",
+      "importance": 7
+    },
+    {
+      "title": "Lloyds宣布四年削减20亿英镑成本计划",
+      "url": "https://www.ft.com/content/38330777-9cb4-4c4e-a0f1-bdbe72ac94a6",
+      "source": "Financial Times",
+      "summary": "劳埃德银行公布新四年战略，计划削减20亿英镑成本应对传统信贷业务转型压力，同时加大非利息收入占比目标。",
+      "importance": 6
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "俄罗斯导弹落入波兰境内距乌边境仅百公里",
+      "url": "https://www.theguardian.com/world/live/2026/jul/30/europe-ukraine-russia-poland-wildfires-france-spain-greece-latest-news-updates",
+      "source": "The Guardian",
+      "summary": "一枚俄军导弹在攻击乌克兰利沃夫时坠入波兰境内，形成直径10米弹坑，波总理与防长均表态「极可能」为俄方巡航导弹，北约东翼安全警报升级。（多家报道）",
+      "importance": 10
+    },
+    {
+      "title": "美国重启对伊朗打击行动中东战火骤起",
+      "url": "https://www.npr.org/2026/07/30/nx-s1-5913077/us-iran-updates",
+      "source": "NPR World",
+      "summary": "短暂停火后美军对伊朗革命卫队数十个目标发动新一轮打击，约旦称拦截5枚射向该国的伊朗导弹，中东全面战争风险急剧攀升。（多家报道）",
+      "importance": 10
+    },
+    {
+      "title": "FCC禁止进口中国造人形机器人",
+      "url": "https://www.dw.com/zh/美国fcc禁止进口中国人形机器人-北京誓言反制/a-78154787",
+      "source": "DW 中文",
+      "summary": "美国联邦通信委员会以国家安全为由禁止进口中国制造的人形机器人，中国商务部回应将采取反制措施，科技贸易摩擦向机器人领域蔓延。",
+      "importance": 8
+    },
+    {
+      "title": "巴控克什米尔选举暴力已致30人死亡",
+      "url": "https://www.aljazeera.com/news/2026/7/30/protest-group-says-30-dead-in-pakistan-administered-kashmir-vote",
+      "source": "Al Jazeera",
+      "summary": "巴控克什米尔7月27日举行区域选举首轮投票后爆发激烈抗议冲突，抗议会称至少30人死亡，选举争议引发严重人道危机。",
+      "importance": 7
+    }
+  ],
+  "editor_note": "今日简报呈现「热战与冷战并行」格局：中东、欧洲地缘冲突急剧升温同时，AI行业内部正就安全边界展开激烈辩论，两者共振可能重塑下半年全球风险偏好。",
+  "keywords": [
+    "美伊冲突",
+    "俄导弹入波",
+    "AI减速协议",
+    "RSI自优化",
+    "FCC机器人禁令",
+    "克什米尔选举",
+    "壳牌利润翻番",
+    "能源地缘"
+  ],
+  "tech_editor_picks": [
+    {
+      "title": "DeepMind AlphaFold团队解散，诺奖得主Demis Hassabis投奔Anthropic",
+      "url": "https://www.qbitai.com/2026/07/463123.html",
+      "source": "量子位",
+      "summary": "DeepMind AlphaFold团队宣告解散，诺奖得主Demis Hassabis投奔Anthropic，谷歌资源正全面转向Gemini项目，AI蛋白质研究格局生变。",
+      "importance": 10,
+      "lab": "anthropic"
+    },
+    {
+      "title": "OpenAI RSI递归自优化技术可让GPT-5.6实现自我进化",
+      "url": "https://www.qbitai.com/2026/07/463297.html",
+      "source": "量子位",
+      "summary": "OpenAI推出的RSI递归自我改进技术被证实可让GPT-5.6实现自我优化，标志着AI自进化能力的新进展，引发行业高度关注。",
+      "importance": 9,
+      "lab": "openai"
+    },
+    {
+      "title": "国产AI安全智能体超越OpenAI和Anthropic，跻身全球前四",
+      "url": "https://www.qbitai.com/2026/07/462447.html",
+      "source": "量子位",
+      "summary": "国产AI安全智能体在安全评测中超越OpenAI和Anthropic，进入全球前四、位列国内第一，AI安全研究能力获得国际认可。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "OpenAI、Anthropic、Google等签署联名信呼吁放慢AI开发速度",
+      "url": "https://www.latent.space/p/ainews-fearing-rsi-openai-anthropic",
+      "source": "Latent Space",
+      "summary": "The Big Pause is coming. OpenAI、Anthropic、Google DeepMind、Meta等头部实验室联名签署公开信，呼吁行业放慢AI发展速度，聚焦安全风险。",
+      "importance": 8,
+      "lab": "openai"
+    },
+    {
+      "title": "OpenAI向10万名学术研究人员提供ChatGPT免费访问权限",
+      "url": "https://www.openai.com/index/chatgpt-for-academic-researchers",
+      "source": "OpenAI News",
+      "summary": "OpenAI向10万名学术研究人员提供ChatGPT高级AI模型的免费访问权限，旨在加速科学研究、协作与发现，提升学术界获取先进AI工具的便利性。",
+      "importance": 7,
+      "lab": "openai"
+    },
+    {
+      "title": "李飞飞World Labs启动机器人训练项目，补足世界模型关键拼图",
+      "url": "https://www.qbitai.com/2026/07/463217.html",
+      "source": "量子位",
+      "summary": "李飞飞创立的World Labs正在推进世界模型的机器人训练工作，这一进展为具身智能研究提供新的技术基础。",
+      "importance": 7,
+      "lab": ""
+    },
+    {
+      "title": "NVIDIA Cosmos-H-Dreams将实时生成式仿真应用于手术机器人",
+      "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
+      "source": "Hugging Face Blog",
+      "summary": "NVIDIA Cosmos-H-Dreams旨在将实时生成式仿真技术应用于手术机器人领域，推动医疗机器人技术的智能化发展。",
+      "importance": 7,
+      "lab": ""
+    }
+  ]
+}
