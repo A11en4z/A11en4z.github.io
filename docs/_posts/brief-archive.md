@@ -1,6 +1,6 @@
 ---
 title: AI 资讯归档
-date: 2026-07-23 00:00:00
+date: 2026-08-01 00:00:00
 permalink: /pages/brief-archive/
 sidebar: false
 article: false
@@ -8,10 +8,11 @@ comment: false
 editLink: false
 ---
 
-<p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
+<p class="brief-archive-meta">1 期晚报 · 最新 2026-08-01</p>
 
 <ul class="brief-archive-list">
-<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a></li>
+<li><a href="/pages/brief-reader/#2026-08-01">2026-08-01</a>
+  <span class="headline">AI价格战与地缘冲突同时升温：GPT-5.6降价80%与欧洲能源危机交织</span></li>
 </ul>
 
 <p><a href="/pages/brief-reader/">→ 阅读最新晚报</a></p>
