@@ -1,0 +1,178 @@
+{
+  "hero_headline": "特朗普暂缓对伊攻击换取快速协议，中东局势暂现缓和",
+  "daily_overview": "地缘政治方面，特朗普宣布暂停对伊朗的军事打击，称各方已就协议框架达成共识，沙特王储表达关切；莫斯科一家高档餐厅发生炸弹袭击致3人死亡、21人受伤，安全形势引发关注；秘鲁新总统藤森庆子就职，寻求在中美博弈中为本国定位。科技领域，OpenAI 将 GPT-5.6 价格最高下调 80%，DeepSeek 发布 V4-Flash API 在基准测试中取得 82 分，模型效率竞争进入新阶段；Gemini Robotics 2 发布强调视频理解与多机器人协作能力；同时有研究指出 LLM 存在根本性安全漏洞难以完全修复。财经方面，BP 宣布出售北海业务终结 60 年生产历史，韩国 Kospi 指数暴跌引发散户愤怒维权，澳新银行与澳洲国民银行为黑石收购汇丰澳洲资产提供融资，油价因海湾紧张局势维持在高位。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI 将 GPT-5.6 Luna 价格下调 80%，推出低延迟 Sol Fast 层级",
+      "url": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "source": "Latent Space",
+      "summary": "OpenAI 宣布 GPT-5.6 Luna 价格下调 80%、Terra 下调 20%，并新增 Sol Fast 层级，延迟降低 2.5 倍但价格翻倍；GPT-5.4 智能水平四个月内下降 13 倍，被指源于 GPT-5.6 递归自我优化后的模型蒸馏。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "DeepSeek 发布 V4-Flash API，基准测试得分达 82 分",
+      "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+      "source": "Smol AI News",
+      "summary": "DeepSeek 公开上线 V4-Flash API，无需改变架构或模型规模即可实现后训练性能大幅跃升，Terminal-Bench 得分达 82 分，刷新非更新架构的性能纪录。",
+      "importance": 8
+    },
+    {
+      "title": "Gemini Robotics ER 2 发布：强化视频理解与多机器人协作",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "source": "DeepMind Blog",
+      "summary": "Gemini Robotics ER 2 支持机器人进行视频推理、任务编排和多机器人协作，可解决真实世界任务，代表机器人在视频理解和工具使用方面的重大进展。",
+      "importance": 8
+    },
+    {
+      "title": "研究指出 LLM 存在根本性安全缺陷，无法完全抵御攻击",
+      "url": "https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/",
+      "source": "MIT Tech Review AI",
+      "summary": "研究人员在国际机器学习大会上发表论文指出，由于大语言模型工作方式的根本性缺陷，使其无法完全抵御黑客攻击，安全漏洞是结构性问题而非实现问题。",
+      "importance": 7
+    },
+    {
+      "title": "OpenAI 公布数学与理论计算机科学十大进展",
+      "url": "https://openai.com/index/ten-advances-in-mathematics",
+      "source": "OpenAI News",
+      "summary": "OpenAI 发布在几何、密码学和计算复杂度等长期开放问题上的新研究成果，涵盖数学定理证明、加密协议优化及复杂度下界等理论计算机科学前沿。",
+      "importance": 7
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "特朗普称若伊朗达成快速协议将取消攻击",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-02/trump-says-us-to-cancel-iran-attack-subject-to-a-rapid-deal",
+      "source": "Bloomberg Markets",
+      "summary": "特朗普表示伊朗及中东多国已请求美国暂停攻击，称协议框架已获各方同意，美国将视谈判进展决定是否继续实施军事打击。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "莫斯科餐厅炸弹袭击致 3 死 21 伤",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-02/bomb-kills-three-injures-21-at-restaurant-on-moscow-s-kudrinskaya-square",
+      "source": "Bloomberg Markets",
+      "summary": "俄罗斯国家反恐委员会通报，首都库德里纳亚广场一家高档餐厅周六夜间发生炸弹袭击，造成 3 人死亡、21 人受伤，当局已展开调查。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "BP 宣布出售北海业务，结束 60 年区域生产历史",
+      "url": "https://www.bbc.co.uk/news/articles/c62q7w003lro?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "BP 完成业务评估后决定出售北海资产，标志着这家油气巨头在该地区长达 60 年的生产历史告终，凸显传统能源资产结构性调整趋势。",
+      "importance": 7
+    },
+    {
+      "title": "韩国散户因 Kospi 暴跌愤怒，要求问责前官员",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-02/crushed-by-kospi-rout-angry-koreans-rip-lee-and-vow-not-to-buy",
+      "source": "Bloomberg Markets",
+      "summary": "韩国 Kospi 指数 7 月大幅下跌重创散户投资者群体 even 长期以承受风险著称的资深交易者也遭受重大损失，引发对政策制定者的强烈不满。",
+      "importance": 7
+    },
+    {
+      "title": "澳新银行与澳洲国民银行为黑石收购汇丰澳洲贷款提供融资",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-02/anz-nab-among-banks-funding-blackstone-hsbc-book-buy-afr-says",
+      "source": "Bloomberg Markets",
+      "summary": "澳新银行和澳洲国民银行参与融资黑石集团 253 亿澳元收购汇丰控股澳洲零售贷款组合，交易规模达 360 亿澳元，为近期亚太区大型并购之一。",
+      "importance": 6
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "特朗普称伊朗协议轮廓已定，暂缓军事打击",
+      "url": "https://www.npr.org/2026/08/02/nx-s1-5917113/trump-says-hes-cancelling-iran-strikes-deal-pending",
+      "source": "NPR World",
+      "summary": "特朗普称伊朗及中东国家已请求美国停止攻击，表示协议的基本框架已获各方同意，但仍需快速敲定细节。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "藤森庆子就任秘鲁总统，寻求中美之间新平衡",
+      "url": "https://www.dw.com/zh/藤森庆子就任总统-秘鲁在中美之间寻求新的平衡/a-78141891?maca=chi-rss-chi-all-1127-rdf",
+      "source": "DW 中文",
+      "summary": "秘鲁新总统藤森庆子就职，承诺加强国内安全并促进投资，同时表态将在中美地缘政治博弈格局中为秘鲁寻找更有利的战略定位。",
+      "importance": 7
+    },
+    {
+      "title": "委内瑞拉地震月余，拉瓜伊拉仍满目疮痍",
+      "url": "https://www.nytimes.com/2026/08/02/world/americas/venezuela-earthquakes-la-guaira.html",
+      "source": "NYT World",
+      "summary": "委内瑞拉拉瓜伊拉沿海地区在地震发生一个多月后仍处于瘫痪状态，这片曾经是委内瑞拉主要门户的区域如今已面目全非，重建进展缓慢。",
+      "importance": 6
+    }
+  ],
+  "editor_note": "本周核心信号是地缘风险与 AI 效率革命并行推进——中东局势因外交斡旋出现转圜空间，而大模型价格战与安全研究揭示的技术矛盾将持续影响产业格局。",
+  "keywords": [
+    "特朗普伊朗协议",
+    "GPT-5.6降价",
+    "DeepSeek V4",
+    "Gemini Robotics 2",
+    "莫斯科爆炸",
+    "BP北海业务",
+    "韩国Kospi暴跌",
+    "藤森庆子"
+  ],
+  "tech_editor_picks": [
+    {
+      "title": "DeepSeek-V4-Flash API公开测试启动，Terminal-Bench得分82",
+      "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+      "source": "Smol AI News",
+      "summary": "DeepSeek发布V4-Flash公开测试版，在未改变架构或规模的情况下，通过后训练实现性能大幅提升，Terminal-Bench达到82分。",
+      "importance": 9,
+      "lab": "deepseek"
+    },
+    {
+      "title": "Gemini Robotics ER 2：视频理解与多机器人协作突破",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "source": "DeepMind Blog",
+      "summary": "Google DeepMind发布Gemini Robotics ER 2，在视频理解、任务编排和多机器人协作方面实现重大突破，显著提升机器人解决现实任务的能力。",
+      "importance": 9,
+      "lab": "google"
+    },
+    {
+      "title": "GPT-5.6价格下调20%-80%，4个月内成本下降13倍",
+      "url": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "source": "Latent Space",
+      "summary": "OpenAI大幅调降GPT-5.6价格，递归自我优化使模型智能成本骤降，标志着AI商业化竞争进入新阶段。",
+      "importance": 8,
+      "lab": "openai"
+    },
+    {
+      "title": "ChatGPT支持操作电脑时实时语音对话",
+      "url": "https://x.com/AITECHio/status/2083160273116856364",
+      "source": "X 推文 (AttentionVC)",
+      "summary": "OpenAI为ChatGPT推出新能力，用户可在其操作电脑时进行自然语音实时交互，多模态交互与自动化执行深度融合。",
+      "importance": 8,
+      "lab": "openai"
+    },
+    {
+      "title": "MiniMax H3：统一四模态理解与原生立体声视频生成",
+      "url": "https://x.com/MiniMax_AI/status/2083008095488516262",
+      "source": "X 推文 (AttentionVC)",
+      "summary": "MiniMax发布H3通用多模态生成模型，统一理解文本、图像、视频、音频并生成带原生立体声的连贯视频，打破模态独立处理限制。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "Qwen-UI-Agent：面向真实设备的GUI代理基础模型",
+      "url": "https://huggingface.co/papers/2607.28227",
+      "source": "HuggingFace Trending Papers",
+      "summary": "阿里通义实验室提出Qwen-UI-Agent，目标是将GUI代理发展为通用数字设备执行器，支持跨平台工作流和长时域任务执行。",
+      "importance": 7,
+      "lab": "alibaba"
+    },
+    {
+      "title": "OpenAI捣毁柬埔寨AI犯罪诈骗团伙",
+      "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-criminal-scam-operation",
+      "source": "OpenAI News",
+      "summary": "OpenAI成功捣毁位于柬埔寨的犯罪诈骗团伙，该组织利用ChatGPT实施投资诈骗、婚恋诈骗、赌博诈骗和身份冒充等违法行为。",
+      "importance": 7,
+      "lab": "openai"
+    },
+    {
+      "title": "前沿实验室AI代理入侵事件技术时间线公布",
+      "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+      "source": "Hugging Face Blog",
+      "summary": "2026年7月前沿实验室AI代理入侵事件的技术时间线详细披露，揭示安全漏洞与应对过程。",
+      "importance": 7,
+      "lab": ""
+    }
+  ]
+}
