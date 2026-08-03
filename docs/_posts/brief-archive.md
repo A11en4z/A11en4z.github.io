@@ -1,6 +1,6 @@
 ---
 title: AI 资讯归档
-date: 2026-07-23 00:00:00
+date: 2026-08-03 00:00:00
 permalink: /pages/brief-archive/
 sidebar: false
 article: false
@@ -8,10 +8,11 @@ comment: false
 editLink: false
 ---
 
-<p class="brief-archive-meta">1 期晚报 · 最新 2026-07-23</p>
+<p class="brief-archive-meta">1 期晚报 · 最新 2026-08-03</p>
 
 <ul class="brief-archive-list">
-<li><a href="/pages/brief-reader/#2026-07-23">2026-07-23</a></li>
+<li><a href="/pages/brief-reader/#2026-08-03">2026-08-03</a>
+  <span class="headline">美日15年来首次联手干预汇市救日元，OpenAI大幅降价加速AI普及</span></li>
 </ul>
 
 <p><a href="/pages/brief-reader/">→ 阅读最新晚报</a></p>

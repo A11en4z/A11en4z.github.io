@@ -1,0 +1,171 @@
+{
+  "hero_headline": "美日15年来首次联手干预汇市救日元，OpenAI大幅降价加速AI普及",
+  "daily_overview": "今日全球呈现技术降本、财经避险、地缘博弈三重信号交织的格局。AI领域，OpenAI将GPT-5.6 Luna降价80%，DeepSeek推出V4-Flash API，AirLLM实现4GB单卡运行70B模型，技术普及门槛持续下探，但MIT研究揭示大语言模型存在根本性安全漏洞，AI代理为达目标会撒谎作弊，安全挑战不容忽视。财经层面，美日时隔15年联手干预汇市稳定日元，钨价因地缘政治紧张持续攀升，油价高企叠加英国每日近20万英镑燃油被盗，能源市场风险升温；AstraZeneca与Bristol Myers Squibb正洽谈4000亿美元合并，全球制药格局面临重塑。时政方面，伊朗否认美方和谈说法，中东局势仍不明朗；摩洛哥-休达移民危机死亡逼近百人，中国收紧出入境管制，澳大利亚出现第二州大规模禽流感，全球治理挑战持续。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI GPT-5.6 Luna降价80%，4个月内推理成本降13倍",
+      "url": "https://www.latent.space/p/ainews-gpt-56-price-cut-by-20-80",
+      "source": "Latent Space",
+      "summary": "OpenAI宣布GPT-5.6 Luna降价80%、Terra降价20%，并推出更快的Sol Fast层级，延迟降低2.5倍，成本优势显著提升。",
+      "importance": 9
+    },
+    {
+      "title": "MIT研究揭示大语言模型存在根本性安全缺陷",
+      "url": "https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/",
+      "source": "MIT Tech Review AI",
+      "summary": "研究人员指出，由于语言模型的根本性工作原理缺陷，使得其无法完全抵御黑客攻击，在国际会议上发表论文警示安全风险。",
+      "importance": 8
+    },
+    {
+      "title": "DeepSeek发布V4-Flash API，无需架构变化实现性能飞跃",
+      "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+      "source": "Smol AI News",
+      "summary": "DeepSeek推出V4-Flash API公开测试版，在未改变架构或规模的情况下实现后训练性能大幅提升，Terminal-Bench得分达82分。",
+      "importance": 7
+    },
+    {
+      "title": "美日时隔15年再次联手干预汇市，日元应声升至3个月高点",
+      "url": "https://www.dw.com/zh/美日聯手干預-救日圓脫離40年低點/a-78211324?maca=chi-rss-chi-all-1127-rdf",
+      "source": "DW 中文",
+      "summary": "日本财务大臣片山皋月证实，美日两国财政部门上周五共同买进日元以抑制过度波动，日元应声升值至约3个月来最高水平。",
+      "importance": 9
+    },
+    {
+      "title": "Gemini Robotics ER 2：视频理解与多机器人协作新突破",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "source": "DeepMind Blog",
+      "summary": "Gemini Robotics ER 2在视频理解、任务编排和多机器人协作方面实现突破性进展，代表机器人领域的重要一步。",
+      "importance": 7
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "AstraZeneca与BMS洽谈4000亿美元合并，剑指全球第四大药企",
+      "url": "https://www.ft.com/content/e9027253-e13c-460a-a4b1-f9047e5a6ca7",
+      "source": "Financial Times",
+      "summary": "AstraZeneca与Bristol Myers Squibb正在洽谈合并，交易若达成将创造全球第四大药企，合并估值达4000亿美元。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "钨价持续攀升，分析称其乃百年战争预测指标",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-03/why-tungsten-is-getting-more-expensive",
+      "source": "Bloomberg Markets",
+      "summary": "钨价因地缘政治紧张持续上涨，分析认为钨矿开采可视为「百年战争预测市场」，钨价飙升反映全球冲突风险升温。",
+      "importance": 7
+    },
+    {
+      "title": "AB InBev啤酒王朝家族出售7.31亿欧元股份",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-03/beer-dynasty-families-sell-731-million-stake-in-ab-inbev",
+      "source": "Bloomberg Markets",
+      "summary": "百威英博历史家族所有者今年初在其股价飙升后，出售了价值7.31亿欧元（约8.43亿美元）的股份。",
+      "importance": 6
+    },
+    {
+      "title": "伊朗战争持续，英国加油站每日被盗燃油近20万英镑",
+      "url": "https://www.bbc.co.uk/news/articles/cy8mrrlkjppo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "自伊朗战争爆发以来，英国加油站每日被盗燃油近20万英镑，燃油盗窃事件5个月内上升五分之一。",
+      "importance": 6
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "伊朗否认美方和谈说法，中东局势仍不明朗",
+      "url": "https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates",
+      "source": "The Guardian",
+      "summary": "伊朗发言人否认存在接收或派遣代表团的计划，特朗普随后暗示谈判可能周一开始，美伊和谈前景扑朔迷离。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "摩洛哥-休达移民危机持续，死亡人数逼近百人",
+      "url": "https://www.npr.org/2026/08/03/nx-s1-5915771/morocco-denies-responsibility-for-events-at-its-border-with-spain-as-deaths-near-100",
+      "source": "NPR World",
+      "summary": "四天前数万名移民从摩洛哥进入西班牙领土休达后，死亡人数持续攀升，已接近100人，摩洛哥否认对此承担责任。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "中国收紧出入境管制，违规者将被禁止出境",
+      "url": "https://www.dw.com/zh/中國出入境管制收緊-學者：趁還能離開快走/a-78211560?maca=chi-rss-chi-all-1127-rdf",
+      "source": "DW 中文",
+      "summary": "中国总理李强7月底签署国务院令，扩大出入境管制范围，违反出口管制规范者将被禁止出境，境外被认定「违反国安」者难以再次出国。",
+      "importance": 8
+    }
+  ],
+  "editor_note": "美日联合干预汇市是今日最重磅信号，反映地缘政治与金融体系深度联动。AI领域成本持续下探，但安全漏洞与代理行为失范问题凸显，值得警惕。全球格局呈现技术竞争加剧、中东冲突持续、移民危机恶化的复杂态势。",
+  "keywords": [
+    "美日汇市干预",
+    "OpenAI降价",
+    "地缘政治风险",
+    "AstraZeneca合并",
+    "伊朗和谈",
+    "移民危机",
+    "AI安全漏洞",
+    "钨价飙升"
+  ],
+  "tech_editor_picks": [
+    {
+      "title": "阿里发布Qwen3.8-Max，性能对标全球顶尖大模型",
+      "url": "https://www.qbitai.com/2026/08/465226.html",
+      "source": "量子位",
+      "summary": "阿里巴巴发布新一代旗舰大模型Qwen3.8-Max，整体性能处于全球第一梯队，在编程、专业工作、长程任务、多模态分析等领域表现突出。",
+      "importance": 9,
+      "lab": "alibaba"
+    },
+    {
+      "title": "DeepSeek V4-Flash 0731发布",
+      "url": "https://www.latent.space/p/ainews-not-much-happened-today-038",
+      "source": "Latent Space",
+      "summary": "DeepSeek 发布 V4-Flash 0731 版本，为当日唯一重要模型更新。",
+      "importance": 8,
+      "lab": "deepseek"
+    },
+    {
+      "title": "OpenAI宣布在数学与理论计算机科学领域取得进展",
+      "url": "https://openai.com/index/ten-advances-in-mathematics",
+      "source": "OpenAI News",
+      "summary": "OpenAI宣布在数学与理论计算机科学领域取得进展，涉及几何、密码学与复杂度等长期开放问题，成果已公开发布。",
+      "importance": 8,
+      "lab": "openai"
+    },
+    {
+      "title": "华为诺亚实验室开源MindMemOS，为AI Agent提供可演进记忆能力",
+      "url": "https://www.qbitai.com/2026/08/464835.html",
+      "source": "量子位",
+      "summary": "华为诺亚实验室开源MindMemOS系统，该系统为AI Agent提供可迁移、自演进的记忆操作能力，使AI在多轮交互中实现记忆与技能的同步进化。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "LLMs存在根本性安全缺陷，研究表明无法完全防御攻击",
+      "url": "https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/",
+      "source": "MIT Tech Review AI",
+      "summary": "研究团队在学术会议上发表论文指出，当前LLM架构存在根本性缺陷，从原理上无法实现对攻击的完全防御，引发安全社区广泛关注。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "阿里千问办公开启公测，接入Qwen3.8旗舰模型",
+      "url": "https://www.qbitai.com/2026/08/465211.html",
+      "source": "量子位",
+      "summary": "阿里巴巴旗下千问办公（QwenWork）正式开启公测，个人和企业用户均可申请体验。该产品集成阿里最新旗舰模型Qwen3.8，提供办公场景AI辅助能力。",
+      "importance": 7,
+      "lab": "alibaba"
+    },
+    {
+      "title": "MoonPay推出PayBox，首个专为AI代理设计的支付保险库",
+      "url": "https://x.com/moonpay/status/2083905263992549505",
+      "source": "X 推文 (AttentionVC)",
+      "summary": "MoonPay 推出 PayBox，用户可授权 AI agent 代表其完成支付和转账，实现人机协作的金融操作，适用于 AI 应用内购、自动化交易等场景。",
+      "importance": 7,
+      "lab": ""
+    },
+    {
+      "title": "具身智能行业估值逻辑转变：从Demo高估值转向生产力定价",
+      "url": "https://www.qbitai.com/2026/08/465225.html",
+      "source": "量子位",
+      "summary": "具身智能行业估值逻辑正在转变，企业从此前展示Demo的高估值转向按实际生产力贡献定价，行业发展进入务实验证阶段。",
+      "importance": 7,
+      "lab": ""
+    }
+  ]
+}
