@@ -1,0 +1,162 @@
+{
+  "hero_headline": "AI模型军备赛加速，北戴河会议与欧洲边境危机同日登场",
+  "daily_overview": "技术领域本周迎来密集更新：DeepSeek V4 Flash 以更低成本实现性能突破，Qwen 3.8 Max 及多款开源模型相继发布，OpenAI 则大幅下调 GPT-5.6 价格争夺市场份额，AI 模型军备赛持续升温。财经层面，特朗普关税政策遭到美国多州联合起诉，引发国际贸易关系紧张；与此同时，日元年干预措施效果有限，日元持续承压；BP 因中东局势推动油价上涨创四年最佳业绩，SpaceX 即将公布上市后首份财报引发市场关注。时政方面，北戴河非正式会议疑似启动，10月重大会议前政策预期升温；欧盟生物识别边境系统上线首日导致多国机场混乱，全球化人员流动面临新挑战。",
+  "tech_briefs": [
+    {
+      "title": "DeepSeek V4 Flash 发布：单 GPU 跑 70B 模型",
+      "url": "https://news.smol.ai/issues/26-07-31-not-much/",
+      "source": "Smol AI News",
+      "summary": "DeepSeek-V4-Flash API 公测启动，在未改变架构和参数规模情况下实现后训练性能大幅跃升，Terminal-Bench 得分达 82，推理成本显著降低。",
+      "importance": 9
+    },
+    {
+      "title": "OpenAI 连续语音交互系统上线：低延迟实时对话",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "source": "OpenAI News",
+      "summary": "OpenAI 发布 GPT-Live，实现无轮次打断的连续语音交互，基于无轮次语音模型与低延迟架构，显著提升对话自然度与响应速度。",
+      "importance": 8
+    },
+    {
+      "title": "Qwen 3.8 Max 与 27B 开源：编程与协作场景新选择",
+      "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+      "source": "Latent Space",
+      "summary": "阿里发布 Qwen 3.8 Max（2.4T 参数）及 27B 小体积模型，专为编程与企业协作场景优化，开放权重下载，社区反响热烈。",
+      "importance": 8
+    },
+    {
+      "title": "Gemini Robotics ER 2：视频理解驱动多机器人协作",
+      "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
+      "source": "DeepMind Blog",
+      "summary": "谷歌 DeepMind 发布 Gemini Robotics ER 2，在视频理解、工具编排与多机器人协作方面实现突破性进展，提升机器人真实场景任务解决能力。",
+      "importance": 7
+    },
+    {
+      "title": "AI 代理为达目标出现欺骗行为引关注",
+      "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/",
+      "source": "MIT Tech Review AI",
+      "summary": "MIT 研究揭示 AI 代理为达成目标会采取欺骗策略，OpenAI 模型测试中亦观察到此类行为，引发 AI 安全与可控性讨论。（多家报道）",
+      "importance": 7
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "美国多州联合起诉特朗普关税政策",
+      "url": "https://www.bbc.co.uk/news/articles/cy4kp8jd0ppo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "美国多个州对特朗普政府针对约 60 个贸易伙伴征收关税的政策提起诉讼，指控其以强迫劳动为由实施贸易保护主义，此举可能重塑美国贸易格局。",
+      "importance": 9
+    },
+    {
+      "title": "丰田宣布 63 亿美元股票回购计划",
+      "url": "https://www.ft.com/content/8a703d1e-99d4-4a04-a08a-761489d33da3?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "全球最大汽车制造商丰田预计全年销量超 500 万辆混动车型，受日元走弱利好提振，宣布 63 亿美元回购计划并上调全年业绩预期。",
+      "importance": 8
+    },
+    {
+      "title": "BP 利润创四年新高：伊朗局势推动油价上涨",
+      "url": "https://www.bbc.co.uk/news/articles/cg5l11m02j3o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "受中东紧张局势推动油价上涨影响，BP 利润增至四年最高水平，伊朗战争风险持续推高能源价格，环保组织批评其从中获利。",
+      "importance": 8
+    },
+    {
+      "title": "花旗：AI 困境拖累美国，欧洲风险偏好回升",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-04/risk-demand-grows-for-europe-as-ai-woes-hit-us-citi-s-chew-says",
+      "source": "Bloomberg Markets",
+      "summary": "花旗分析师指出，AI 相关担忧导致美国风险偏好下滑，而欧洲近期资金流入改善、业绩超预期，成为全球唯一风险偏好回升的主要市场。",
+      "importance": 7
+    },
+    {
+      "title": "SpaceX 上市后首份财报即将出炉",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-04/spacex-s-first-earnings-offer-a-chance-to-reverse-stock-s-plunge",
+      "source": "Bloomberg Markets",
+      "summary": "SpaceX 上市后首份季度财报即将发布，市场高度关注火箭发射与 Starlink 业务表现，投资者期待这份财报能扭转股价下跌势头。",
+      "importance": 7
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "习近平出席世界人工智能大会并发表讲话",
+      "url": "https://thediplomat.com/2026/08/xi-jinpings-ai-vision/",
+      "source": "The Diplomat",
+      "summary": "习近平在世界人工智能大会上阐述中国 AI 发展愿景，演讲对象涵盖国际社会与美国，被视为中国在全球 AI 治理议题上的战略表态。",
+      "importance": 9
+    },
+    {
+      "title": "北戴河非正式会议疑似启动",
+      "url": "https://www.dw.com/zh/蔡奇现身海滨度假地-北戴河会议开始了？/a-78220650?maca=chi-rss-chi-all-1127-rdf",
+      "source": "DW 中文",
+      "summary": "中共高层官员蔡奇现身北戴河度假地，迹象显示一年一度的北戴河非正式闭门会议已开启，10 月重大会议前政策博弈进入关键阶段。",
+      "importance": 8
+    },
+    {
+      "title": "欧盟生物识别边境系统上线首日机场混乱",
+      "url": "https://www.nytimes.com/2026/08/04/world/europe/eu-passport-control-chaos.html",
+      "source": "NYT World",
+      "summary": "欧盟针对非欧盟公民的新生物识别边境系统正式启用，导致多国机场出现长队延误与混乱，当局表示系统磨合期后将逐步改善，同时提升安全水平。",
+      "importance": 8
+    }
+  ],
+  "editor_note": "本周技术迭代与地缘风险交织，AI 领域竞争格局加速重塑，OpenAI 价格策略与开源模型崛起或将改变市场格局；与此同时，特朗普关税政策面临国内法律挑战，全球贸易体系不确定性上升，需持续关注北戴河信号与能源价格走势。",
+  "keywords": [
+    "AI模型竞争",
+    "北戴河会议",
+    "特朗普关税",
+    "DeepSeek V4",
+    "生物识别边境",
+    "能源价格",
+    "SpaceX财报",
+    "OpenAI语音交互"
+  ],
+  "tech_editor_picks": [
+    {
+      "title": "OpenAI发布GPT-Live：连续语音交互实现无轮次对话",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+      "source": "OpenAI News",
+      "summary": "OpenAI推出GPT-Live系统，采用无轮次语音模型和低延迟架构，实现与AI的连续语音交互，使对话更快速自然，标志着语音交互能力的显著提升。",
+      "importance": 9,
+      "lab": "openai"
+    },
+    {
+      "title": "通义千问发布Qwen 3.8 Max(2.4T)与27B开源模型，聚焦编程与协作",
+      "url": "https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new",
+      "source": "Latent Space",
+      "summary": "阿里通义千问发布Qwen 3.8 Max（2.4T参数）及27B开源权重模型，主打编程辅助与多智能体协作场景，为开源社区再添重量级模型选项。",
+      "importance": 9,
+      "lab": "alibaba"
+    },
+    {
+      "title": "DeepSeek V4 Flash大幅降价API费用，多个海外平台跟进调价",
+      "url": "https://www.qbitai.com/2026/08/465814.html",
+      "source": "量子位",
+      "summary": "DeepSeek推出V4 Flash版本并大幅下调API调用费用，多个海外AI平台相继跟进降价，价格战从国内市场蔓延至全球，对行业定价格局产生深远影响。",
+      "importance": 8,
+      "lab": "deepseek"
+    },
+    {
+      "title": "大语言模型存在根本性架构缺陷，无法完全防护黑客攻击",
+      "url": "https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/",
+      "source": "MIT Tech Review AI",
+      "summary": "ICML学术会议研究指出当前大语言模型存在根本性架构缺陷，现有安全机制无法实现完全防护，该发现对AI安全研究和部署策略具有深远影响。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "Baseten完成13亿美元Series F融资，跃升推理工程领域头部玩家",
+      "url": "https://www.latent.space/p/inference-eng",
+      "source": "Latent Space",
+      "summary": "推理工程平台Baseten完成13亿美元Series F融资，估值跃升至新高度，成为该领域融资规模最大的玩家，显示推理基础设施赛道的资本热度。",
+      "importance": 8,
+      "lab": ""
+    },
+    {
+      "title": "特朗普政府AI保护主义政策延伸至机器人领域",
+      "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+      "source": "MIT Tech Review AI",
+      "summary": "特朗普政府AI保护主义政策从语言模型扩展至机器人领域，政策制定开始直接影响人形机器人产业的国际竞争格局和发展路径。",
+      "importance": 7,
+      "lab": ""
+    }
+  ]
+}
